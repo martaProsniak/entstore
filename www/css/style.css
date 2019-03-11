@@ -5,7 +5,7 @@ body {
     background-repeat: repeat;
 }
 
-#container {
+#solid_background {
 	background-color: #3a4f19;
 	border-radius: 75px 75px 0px 0px;
 	border-color: #3a4f19;

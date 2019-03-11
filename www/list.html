@@ -11,9 +11,10 @@
 		<link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
 		<link rel="stylesheet" href="css/fontello.css" type="text/css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script src="js/ents.js"></script>
 	</head>
 	<body>
-		<div id="container">
+		<div id="solid_background">
 			<header>
 				<h1>
 					<i class="icon-tree-2"></i>EntStore<i class="icon-tree-2"></i><br>
@@ -27,12 +28,17 @@
 					<li><a href="contact.html">contact</a></li>
 				</ul>
 			</nav>
-			<section>
-				This will be products!
+			<section id ="ents">
+			 <script>
+				$(window).on("load", function() {
+				populateEnts('ents');
+				});
+    </script>
 			</section>
 			<footer>
 				No ents were harmed during creating this website<br>&copy; Copyright 2019
 			</footer>
 		</div>
 	</body>
+
 </html>
