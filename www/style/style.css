@@ -1,0 +1,12 @@
+body {
+    margin: auto;
+    width: 1000px;
+    background-image: url("../img/ents.jpg");
+    background-repeat: repeat;
+}
+header {
+    margin: auto;
+    height: 100px;
+    background-color: white;
+
+}
