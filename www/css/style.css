@@ -72,24 +72,48 @@ nav ul li a:hover {
 
 section {
 	min-height: 450px;
+	text-align: center;
 }
 
 footer {
+    clear: both;
 	text-align: center;
 	color: #627249;
 	height: 50px;
 }
 
 table.speciesTable{
-	margin: 15px;
-}
+ 	margin: 25px 10px 25px 10px;
+ 	width: 250px;
+ 	float: left;
+ 	text-align: center;
+ }
 
 table.speciesTable, table.speciesTable tr, table.speciesTable td, table.speciesTable th {
     border-collapse: collapse;
     border-width: 2px;
-    border-style: solid;
+    border-style: dotted;
+    border-color: #2e3327;
 }
 
-table.speciesTable td, table.speciesTable th {
-    padding: 15px;
-}
+ table.speciesTable td, table.speciesTable th {
+     padding: 15px;
+ }
+
+
+table.nestTable{
+    padding: 0px;
+ 	margin: auto;
+ 	width: 250px;
+ }
+
+ table.nestTable, table.nestTable tr, table.nestTable td, table.nestTable th {
+     border-width: 2px 2px 0px 0px;
+     border-collapse: collapse;
+     border-style: dotted;;
+     border-color: #2e3327;
+ }
+
+ table.nestTable td, table.nestTable th {
+     padding: 5px;
+ }

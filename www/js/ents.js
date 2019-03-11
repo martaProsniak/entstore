@@ -40,6 +40,16 @@ var ents = [
 		}
 	},
 	{
+    	"age": 115,
+    	"species": "poplar",
+    	"plantYear": 1904,
+    	"mobile": "yes",
+    	"nests": {
+    			"birds": "sparrows",
+    			"count": 8
+    		}
+    	},
+	{
 		"age": 189,
 		"species": "chestnut",
 		"plantYear": 1830,
@@ -71,7 +81,8 @@ function populateEnts(container){
 }
 
 function createEntTable(ent) {
-    var table = $("<table></table>").append($("<caption></caption>").text("species")).addClass("speciesTable");
+    var table = $("<table></table>").append($("<caption></caption>").text("ents")).addClass("speciesTable");
+    table.append(createSimpleRow("species", ent.species));
 	table.append(createSimpleRow("age", ent.age));
 	table.append(createSimpleRow("plant year", ent.plantYear));
 	table.append(createSimpleRow("mobile", ent.mobile));
