@@ -9,14 +9,14 @@ body {
 	background-color: #3a4f19;
 	border-radius: 75px 75px 0px 0px;
 	border-color: #3a4f19;
-	min-height: 680px;
+	min-height: 700px;
 	font-family: 'Arima Madurai', cursive;
 }
 
 
 header {
     margin: auto;
-	margin-top: 30px;
+	margin-top: 25px;
     height: 150px;
 	text-align: center;
 	text-margin: auto;
@@ -55,7 +55,7 @@ nav ul li a {
     padding: 5px;
     text-decoration: none;
     font-size: 25px;
-	color: #f1ffdb;
+	color: #a8ba8d;
     text-transform: capitalize;
 }
 
@@ -63,4 +63,19 @@ nav ul li a:hover {
     background-color: #c9c2a1;
     text-decoration: none;
 	color: #2a3b0f;
+	-moz-transform: rotate(3deg);
+	-webkit-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+section {
+	min-height: 450px;
+}
+
+footer {
+	text-align: center;
+	color: #627249;
+	height: 50px;
 }
