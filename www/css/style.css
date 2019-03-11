@@ -79,3 +79,17 @@ footer {
 	color: #627249;
 	height: 50px;
 }
+
+table.speciesTable{
+	margin: 15px;
+}
+
+table.speciesTable, table.speciesTable tr, table.speciesTable td, table.speciesTable th {
+    border-collapse: collapse;
+    border-width: 2px;
+    border-style: solid;
+}
+
+table.speciesTable td, table.speciesTable th {
+    padding: 15px;
+}
