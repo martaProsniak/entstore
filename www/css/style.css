@@ -111,9 +111,7 @@ table.speciesTable th, table.speciesTable td {
 }
 
 table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesTable td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #263310;
+    border-width: 1px solid #263310;
 	border-radius: 2px;
 }
 
@@ -135,4 +133,16 @@ table.speciesTable td {
     background-color: #c9c2a1;
 	text-decoration: none;
 	color: #2a3b0f;
+}
+
+table.speciesTable td.button:hover {
+    background-color: #959F86;
+	text-decoration: none;
+	color: #2a3b0f;
+	cursor: pointer;
+	-moz-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	-o-transform: scale(0.98);
+	-ms-transform: scale(0.98);
+	transform: scale(0.98);
 }

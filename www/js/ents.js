@@ -113,7 +113,7 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td></td>").text(mobile))
         .append($("<td class=\"birds\"></td>").text(nest.birds))
         .append($("<td class=\"count\"></td>").text(nest.count))
-		.append($("<td></td>").text("add"));
+		.append($("<td class=\"button\"></td>").text("add"));
 }
 
 function createHeader(h, text) {
