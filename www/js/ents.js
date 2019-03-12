@@ -103,7 +103,7 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td></td>").text(age))
         .append($("<td></td>").text(plantYear))
         .append($("<td></td>").text(mobile))
-        .append($("<td></td>").text(nest));
+        .append($("<td></td>").attr("colspan", 2).text(nest.birds));
         //nests = createNestTable(nest);
         //table.append(nests);
 
