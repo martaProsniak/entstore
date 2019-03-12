@@ -81,7 +81,7 @@ section {
 }
 
 #entList {
-	width: 100px;
+	width: 150px;
 	height: 250px;
 	margin: 0px 35px 20px 35px;
 	float: left;
@@ -103,11 +103,11 @@ footer {
 table.speciesTable {
     text-align: center;
     margin: 20px auto 20px 0px;
-	min-width: 720px;
+	min-width: 700px;
 }
 
 table.speciesTable th, table.speciesTable td {
-	width: 120px;
+	width: 100px;
 }
 
 table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesTable td {

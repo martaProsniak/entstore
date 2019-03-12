@@ -86,7 +86,7 @@ function populateEnts(container){
 
 function createEntTable(ent) {
     var table = $("<table></table>").append($("<caption></caption>")).addClass("speciesTable");
-    table.append(createEntsTableHeader("species", "age", "plant year", "mobile", "nests"));
+    table.append(createEntsTableHeader("species", "age", "plant year", "mobile", "nests", "list"));
     	for (var index in ents) {
     		ent = ents[index];
     		table.append(createRowsInEntTable
@@ -95,14 +95,15 @@ function createEntTable(ent) {
     return table;
 }
 
-function createEntsTableHeader (species, age, plantYear, mobile, nests){
+function createEntsTableHeader (species, age, plantYear, mobile, nests, button){
     return $("<tr></tr>").append($("<th></th>").text(species))
         .append($("<th></th>").text(age))
         .append($("<th></th>").text(plantYear))
         .append($("<th></th>").text(mobile))
         .append($("<th id=\"nestsCol\"></th>").attr("colspan", 2).text(nests)
             .append($("<th class=\"birds\"></th>").text("birds"))
-            .append($("<th class=\"count\"></th>").text("count")));
+            .append($("<th class=\"count\"></th>").text("count")))
+		.append($("<th></th>").text(button));
 }
 
 function createRowsInEntTable(species, age, plantYear, mobile, nest) {
@@ -111,7 +112,8 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td></td>").text(plantYear))
         .append($("<td></td>").text(mobile))
         .append($("<td class=\"birds\"></td>").text(nest.birds))
-        .append($("<td class=\"count\"></td>").text(nest.count));
+        .append($("<td class=\"count\"></td>").text(nest.count))
+		.append($("<td></td>").text("add"));
 }
 
 function createHeader(h, text) {
