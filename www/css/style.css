@@ -9,7 +9,7 @@ body {
 	background-color: #3a4f19;
 	border-radius: 75px 75px 0px 0px;
 	border-color: #3a4f19;
-	min-height: 700px;
+	min-height: 600px;
 	font-family: 'Arima Madurai', cursive;
 }
 
@@ -25,6 +25,10 @@ header {
 	border-color: #775c39;
 	border-radius: 75px 75px 0px 0px;
 	font-family: 'Great Vibes', cursive;
+}
+
+header a {
+	text-decoration: none;
 }
 
 h1 {
@@ -67,24 +71,38 @@ nav ul li a:hover {
 	-webkit-transform: rotate(3deg);
 	-o-transform: rotate(3deg);
 	-ms-transform: rotate(3deg);
-	transform: rotate(3deg);
+	-transform: rotate(3deg);
+	transition: all .5s ease-in-out;
 }
 
 section {
-	min-height: 450px;
+	min-height: 400px;
 	text-align: center;
+}
+
+#entList {
+	width: 100px;
+	height: 250px;
+	margin: 0px 35px 20px 35px;
+	float: left;
+	background-color: #c9c2a1;
+	border-width: 1px;
+    border-style: solid;
+    border-color: #263310;
+	border-radius: 2px;
 }
 
 footer {
     clear: both;
 	text-align: center;
-	color: #627249;
+	color: #959F86;
 	height: 50px;
+	background-color: #293e08;
 }
 
 table.speciesTable {
     text-align: center;
-    margin: 30px auto auto auto;
+    margin: 20px auto 20px 0px;
 	min-width: 720px;
 }
 
@@ -96,6 +114,7 @@ table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesT
     border-width: 1px;
     border-style: solid;
     border-color: #263310;
+	border-radius: 2px;
 }
 
 #nestsCol th{

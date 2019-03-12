@@ -1,7 +1,7 @@
 var ents = [
 	{
 		"age": 120,
-		"species": "oak",
+		"species": "maple",
 		"plantYear": 1899,
 		"mobile": "yes",
 		"nests": { 
@@ -72,6 +72,12 @@ function populateEnts(container){
 
 	article = $("<article></article>");
     $(container).append(article);
+	
+	entAside = $("<aside></aside>");
+    article.append(entAside);
+	
+	entList = $("<div id=\"entList\"></div>");
+	entAside.append(entList);
 
     var entsTable = createEntTable(ent);
     article.append(entsTable);
@@ -108,6 +114,9 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td class=\"count\"></td>").text(nest.count));
 }
 
+function createHeader(h, text) {
+    return $("<header></header>").append($(h).text(text));
+}
 
 
 
