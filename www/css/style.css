@@ -82,14 +82,20 @@ section {
 
 #entList {
 	width: 150px;
-	height: 250px;
+	min-height: 300px;
 	margin: 0px 35px 20px 35px;
 	float: left;
 	background-color: #c9c2a1;
 	border-width: 1px;
     border-style: solid;
-    border-color: #263310;
+    border-color: #959F86;
 	border-radius: 2px;
+}
+
+
+h4 {
+	font-family: 'Arima Madurai', cursive;
+	font-size: 18px;
 }
 
 footer {
@@ -102,8 +108,10 @@ footer {
 
 table.speciesTable {
     text-align: center;
-    margin: 20px auto 20px 0px;
+    margin: 20px 20px 20px 0px;
 	min-width: 700px;
+	min-height: 300px;
+	font-size: 18px;
 }
 
 table.speciesTable th, table.speciesTable td {
@@ -145,4 +153,11 @@ table.speciesTable td.button:hover {
 	-o-transform: scale(0.98);
 	-ms-transform: scale(0.98);
 	transform: scale(0.98);
+}
+
+table.speciesTable input {
+	background-color: #c9c2a1;
+	text-decoration: none;
+	color: #2a3b0f;
+	cursor: pointer;
 }
