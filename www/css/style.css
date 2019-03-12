@@ -87,23 +87,11 @@ h2 {
     font-size: 25px;
 }
 
-table.speciesTable header {
-    width: 175px;
-    float: left;
-    margin: 5px;
-}
-
-table tr {
-    width: 175px;
-    float: left;
-    margin: 5x;
-}
-
 table.speciesTable{
  	margin: 25px 10px 25px 10px;
-
  	text-align: center;
- 	float: left;
+ 	text-align: center;
+ 	min-width: 750px;
  }
 
 table.speciesTable, table.speciesTable tr, table.speciesTable td, table.speciesTable th {
@@ -113,10 +101,13 @@ table.speciesTable, table.speciesTable tr, table.speciesTable td, table.speciesT
     border-color: #2e3327;
 }
 
- table.speciesTable td, table.speciesTable th, table.speciesTable th {
-     padding: 15px;
-
+ table.speciesTable tr {
+     width: 750px;
  }
+
+  table.speciesTable tr {
+      width: 150px;
+  }
 
 
 table.nestTable{
