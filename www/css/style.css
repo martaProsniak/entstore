@@ -84,25 +84,21 @@ footer {
 
 table.speciesTable {
     text-align: center;
-    margin: 25px;
-	min-width: 750px;
+    margin: 30px auto auto auto;
+	min-width: 720px;
 }
 
-table.speciesTable th, table.speciesTable tr {
+table.speciesTable th, table.speciesTable td {
 	width: 120px;
 }
 
 table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesTable td {
-    border-collapse: collapse;
-    border-width: 2px;
-    border-style: dotted;
+    border-width: 1px;
+    border-style: solid;
     border-color: #263310;
 }
 
 #nestsCol th{
-	border-top-color: #263310;
-	border-top-style: dotted;
-	border-top-width: 2px;
 	border-bottom: 0px;
 	border-right: 0px;
 	border-left: 0px;
@@ -110,19 +106,14 @@ table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesT
 	padding: 0px;
 }
 
-
-th.birds {
-	min-width: 200px;
+table.speciesTable th {
+    background-color: #293e08;
+	text-decoration: none;
+	color: #959F86;
 }
 
-th.count {
-	min-width: 50px;
+table.speciesTable td {
+    background-color: #c9c2a1;
+	text-decoration: none;
+	color: #2a3b0f;
 }
-
-td.birds {
-	min-width: 200px;
-}
-td.count {
-	min-width: 50px;
-}
-
