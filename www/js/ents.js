@@ -95,7 +95,7 @@ function createEntsTableHeader (species, age, plantYear, mobile, nests){
         .append($("<th></th>").text(age))
         .append($("<th></th>").text(plantYear))
         .append($("<th></th>").text(mobile))
-        .append($("<th></th>").text(nests));
+        .append($("<th></th>").attr("colspan", 2).text(nests));
 }
 
 function createRowsInEntTable(species, age, plantYear, mobile, nest) {
@@ -103,7 +103,10 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td></td>").text(age))
         .append($("<td></td>").text(plantYear))
         .append($("<td></td>").text(mobile))
-        .append($("<td></td>").attr("colspan", 2).text(nest.birds));
+        .append($("<td></td>").attr("colspan", 2).text("birds")
+            .append($("<td></td>").text(nest.birds)))
+        .append($("<td></td>").attr("colspan", 2).text("count")
+             .append($("<td></td>").text(nest.count)));
         //nests = createNestTable(nest);
         //table.append(nests);
 
