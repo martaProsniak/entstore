@@ -83,7 +83,6 @@ function createEntTable(ent) {
     table.append(createEntsTableHeader("species", "age", "plant year", "mobile", "nests"));
     	for (var index in ents) {
     		ent = ents[index];
-    		//var nest = ent.nests;
     		table.append(createRowsInEntTable
     		    (ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests));
     	}
@@ -95,7 +94,9 @@ function createEntsTableHeader (species, age, plantYear, mobile, nests){
         .append($("<th></th>").text(age))
         .append($("<th></th>").text(plantYear))
         .append($("<th></th>").text(mobile))
-        .append($("<th></th>").attr("colspan", 2).text(nests));
+        .append($("<th></th>").attr("colspan", 2).text(nests)
+            .append($("<th></th>").attr("rowspan", 2).text("birds"))
+            .append($("<th></th>").text("count")));
 }
 
 function createRowsInEntTable(species, age, plantYear, mobile, nest) {
@@ -103,21 +104,19 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td></td>").text(age))
         .append($("<td></td>").text(plantYear))
         .append($("<td></td>").text(mobile))
-        .append($("<td></td>").attr("colspan", 2).text("birds")
-            .append($("<td></td>").text(nest.birds)))
-        .append($("<td></td>").attr("colspan", 2).text("count")
-             .append($("<td></td>").text(nest.count)));
+        .append($("<td></td>").text(nest.birds))
+        .append($("<td></td>").text(nest.count));
         //nests = createNestTable(nest);
         //table.append(nests);
 
 }
-
+/*
 function createNestTable(nest) {
 	var table = $("<table></table>").append($("<caption></caption>")).addClass("nestTable");
 	table.append($("<th></th>").attr("rowspan", value.length).text(birds)).append($("<td></td>").text(nest.birds))
     table.append($("<th></th>").attr("rowspan", value.length).text(count).append($("<td></td>").text(nest.count)));
 	return table;
-}
+}*/
 
 
 
