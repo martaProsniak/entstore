@@ -72,38 +72,44 @@ function populateEnts(container){
 
 	article = $("<article></article>");
     $(container).append(article);
-	
-	for (var index in ents) {
-		ent = ents[index];
-		var entsTable = createEntTable(ent);
-		article.append(entsTable);
-	}
+
+    var entsTable = createEntTable(ent);
+    article.append(entsTable);
+
 }
 
 function createEntTable(ent) {
-    var table = $("<table></table>").append($("<caption></caption>").text("ents")).addClass("speciesTable");
-    table.append(createSimpleRow("species", ent.species));
-	table.append(createSimpleRow("age", ent.age));
-	table.append(createSimpleRow("plant year", ent.plantYear));
-	table.append(createSimpleRow("mobile", ent.mobile));
-	var nest = ent.nests;
-	table.append(createNestTable(nest));
-	
+    var table = $("<table></table>").append($("<caption></caption>")).addClass("speciesTable");
+    table.append(createHeader('<h2>', "species"));
+    table.append(createHeader('<h2>', "age"));
+    table.append(createHeader('<h2>', "plant year"));
+    table.append(createHeader('<h2>', "mobile"));
+    table.append(createHeader('<h2>', "nests"));
+
+    	for (var index in ents) {
+    		ent = ents[index];
+    		    table.append(createSimpleRow(ent.species));
+            	table.append(createSimpleRow(ent.age));
+            	table.append(createSimpleRow(ent.plantYear));
+            	table.append(createSimpleRow(ent.mobile));
+            	var nest = ent.nests;
+            	table.append(createNestTable(nest));
+    	}
+
     return table;
 }
 
 function createNestTable(nest) {
-	var table = $("<table></table>").append($("<caption></caption>").text("nests")).addClass("nestTable");
-	table.append(createSimpleRow("birds", nest.birds));
-	table.append(createSimpleRow("count of nests", nest.count));
+	var table = $("<table></table>").append($("<caption></caption>")).addClass("nestTable");
+	table.append(createSimpleRow(nest.birds));
+	table.append(createSimpleRow(nest.count));
 	return table;
 }
 
-function createSimpleRow(header, value) {
-    return $("<tr></tr>").append($("<th></th>").text(header)).append($("<td></td>").text(value));
+function createSimpleRow(value) {
+    return $("<tr></tr>").append($("<td></td>").text(value));
 	return table;
 }
-
 
 function createHeader(h, text) {
     return $("<header></header>").append($(h).text(text));
