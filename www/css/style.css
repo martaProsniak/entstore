@@ -82,47 +82,47 @@ footer {
 	height: 50px;
 }
 
-h2 {
-    font-family: 'Arima Madurai', cursive;
-    font-size: 25px;
+table.speciesTable {
+    text-align: center;
+    margin: 25px;
+	min-width: 750px;
 }
 
-table.speciesTable{
- 	margin: 25px 10px 25px 10px;
- 	text-align: center;
- 	text-align: center;
- 	min-width: 750px;
- }
+table.speciesTable th, table.speciesTable tr {
+	width: 120px;
+}
 
-table.speciesTable, table.speciesTable tr, table.speciesTable td, table.speciesTable th {
+table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesTable td {
     border-collapse: collapse;
     border-width: 2px;
     border-style: dotted;
-    border-color: #2e3327;
+    border-color: #263310;
 }
 
- table.speciesTable tr {
-     width: 750px;
- }
+#nestsCol th{
+	border-top-color: #263310;
+	border-top-style: dotted;
+	border-top-width: 2px;
+	border-bottom: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	margin: 0px;
+	padding: 0px;
+}
 
-  table.speciesTable tr {
-      width: 150px;
-  }
 
+th.birds {
+	min-width: 200px;
+}
 
-table.nestTable{
-    padding: 0px;
- 	margin: auto;
+th.count {
+	min-width: 50px;
+}
 
- }
+td.birds {
+	min-width: 200px;
+}
+td.count {
+	min-width: 50px;
+}
 
- table.nestTable, table.nestTable tr, table.nestTable td, table.nestTable th {
-     border-width: 2px 2px 0px 0px;
-     border-collapse: collapse;
-     border-style: dotted;;
-     border-color: #2e3327;
- }
-
- table.nestTable td, table.nestTable th {
-     padding: 5px;
- }

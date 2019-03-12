@@ -94,9 +94,9 @@ function createEntsTableHeader (species, age, plantYear, mobile, nests){
         .append($("<th></th>").text(age))
         .append($("<th></th>").text(plantYear))
         .append($("<th></th>").text(mobile))
-        .append($("<th></th>").attr("colspan", 2).text(nests)
-            .append($("<th></th>").attr("rowspan", 2).text("birds"))
-            .append($("<th></th>").text("count")));
+        .append($("<th id=\"nestsCol\"></th>").attr("colspan", 2).text(nests)
+            .append($("<th class=\"birds\"></th>").text("birds"))
+            .append($("<th class=\"count\"></th>").text("count")));
 }
 
 function createRowsInEntTable(species, age, plantYear, mobile, nest) {
@@ -104,19 +104,10 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest) {
         .append($("<td></td>").text(age))
         .append($("<td></td>").text(plantYear))
         .append($("<td></td>").text(mobile))
-        .append($("<td></td>").text(nest.birds))
-        .append($("<td></td>").text(nest.count));
-        //nests = createNestTable(nest);
-        //table.append(nests);
-
+        .append($("<td class=\"birds\"></td>").text(nest.birds))
+        .append($("<td class=\"count\"></td>").text(nest.count));
 }
-/*
-function createNestTable(nest) {
-	var table = $("<table></table>").append($("<caption></caption>")).addClass("nestTable");
-	table.append($("<th></th>").attr("rowspan", value.length).text(birds)).append($("<td></td>").text(nest.birds))
-    table.append($("<th></th>").attr("rowspan", value.length).text(count).append($("<td></td>").text(nest.count)));
-	return table;
-}*/
+
 
 
 
