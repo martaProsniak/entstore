@@ -136,6 +136,9 @@ function createTableHeaders (species, age, plantYear, mobile, nests, button) {
 	th5.appendChild(thCount);
 	tr.appendChild(th6);
 	
+	th5.classList.add("birds");
+	th6.classList.add("count");
+	
 	return tr;
 }
 
@@ -147,13 +150,18 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	var td4 = document.createElement("td");
 	var td5 = document.createElement("td");
 	var td6 = document.createElement("td");
+	var td7 = document.createElement("td");
 
 	td1.innerHTML = species;
 	td2.innerHTML = age;
 	td3.innerHTML = plantYear;
 	td4.innerHTML = mobile;
-	td5.innerHTML = nests;
-	td6.innerHTML = button;
+	td5.innerHTML = nest.birds;
+	td6.innerHTML = nest.count;
+	td7.innerHTML = button;
+	
+	td5.classList.add("birds");
+	td6.classList.add("count");
 	
 	tr.appendChild(td1);
 	tr.appendChild(td2);
@@ -161,6 +169,7 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	tr.appendChild(td4);
 	tr.appendChild(td5);
 	tr.appendChild(td6);
+	tr.appendChild(td7);
 	
 	return tr;
 }
