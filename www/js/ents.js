@@ -7,8 +7,7 @@ var ents = [
 		"nests": { 
 				"birds": "owl",
 				"count": 4
-		},
-		"add": 0,
+		}
 	},
 	{
 		"age": 99,
@@ -18,8 +17,7 @@ var ents = [
 		"nests": {
 			"birds": "swallow",
 			"count": 5
-		},
-		"add": 0,
+		}
 	},
 	{
 		"age": 150,
@@ -29,8 +27,7 @@ var ents = [
 		"nests": {
 			"birds": "eagles",
 			"count": 3
-		},
-		"add": 0,
+		}
 	},
 	{
 		"age": 209,
@@ -40,8 +37,7 @@ var ents = [
 		"nests": {
 				"birds": "mockingbirds",
 				"count": 6
-		},
-		"add": 0,
+		}
 	},
 	{
     	"age": 115,
@@ -51,9 +47,8 @@ var ents = [
     	"nests": {
     			"birds": "sparrows",
     			"count": 8
-    	},
-		"add": 0,
-    	},
+    	}
+    },
 	{
 		"age": 189,
 		"species": "chestnut",
@@ -62,12 +57,114 @@ var ents = [
 		"nests": {
 				"birds": "ducks",
 				"count": 2
-		},
-		"add": 0,
+		}
 	}
 ];
 
 
+
+function populateEnts(container){
+	var url_string = window.location.href;//Get url from browser.
+    var url = new URL(url_string);//Make it url object.
+    var ent = url.searchParams.get("ent");//Get query param.
+	
+	var container = document.getElementById(container);
+	ent = ents[ent];
+	article = document.createElement("article");
+	container.appendChild(article);
+	
+	entAside = document.createElement("aside");
+	article.appendChild(entAside);
+	
+	userList = document.createElement("div");
+	userList.classList.add("userList");
+	entAside.appendChild(userList);
+	
+	var entsTable = createEntsTable(ent);
+	article.appendChild(entsTable);
+}
+
+function createEntsTable(ent){
+	var table = document.createElement("table");
+	
+	var caption = document.createElement("caption");
+	caption.innerText = "Availlable ents:";
+	table.appendChild(caption);
+	table.classList.add("entsTable");
+	
+	table.appendChild(createTableHeaders("species", "age", "plant year", "mobile", "nests", "add"));
+	
+	for (var index in ents) {
+    		ent = ents[index];
+    		table.appendChild(createTableRows(ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests, ent.add));
+    	}
+	
+	return table;
+}
+
+function createTableHeaders (species, age, plantYear, mobile, nests, button) {
+	var tr = document.createElement("tr");
+	var th1 = document.createElement("th");
+	var th2 = document.createElement("th");
+	var th3 = document.createElement("th");
+	var th4 = document.createElement("th");
+	var th5 = document.createElement("th");
+	var th6 = document.createElement("th");
+	
+	th1.innerHTML = species;
+	th2.innerHTML = age;
+	th3.innerHTML = plantYear;
+	th4.innerHTML = mobile;
+	th5.innerHTML = nests;
+	th6.innerHTML = button;
+	
+	th5.setAttribute("id", "nestsCol");
+	th5.setAttribute("colspan", 2);
+
+	var thBirds = document.createElement("th");
+	thBirds.innerHTML = "birds";
+	
+	var thCount = document.createElement("th");
+	thCount.innerHTML = "count";
+	
+	tr.appendChild(th1);
+	tr.appendChild(th2);
+	tr.appendChild(th3);
+	tr.appendChild(th4);
+	tr.appendChild(th5);
+	th5.appendChild(thBirds);
+	th5.appendChild(thCount);
+	tr.appendChild(th6);
+	
+	return tr;
+}
+
+function createTableRows(species, age, plantYear, mobile, nest, button){
+	var tr = document.createElement("tr");
+	var td1 = document.createElement("td");
+	var td2 = document.createElement("td");
+	var td3 = document.createElement("td");
+	var td4 = document.createElement("td");
+	var td5 = document.createElement("td");
+	var td6 = document.createElement("td");
+
+	td1.innerHTML = species;
+	td2.innerHTML = age;
+	td3.innerHTML = plantYear;
+	td4.innerHTML = mobile;
+	td5.innerHTML = nests;
+	td6.innerHTML = button;
+	
+	tr.appendChild(td1);
+	tr.appendChild(td2);
+	tr.appendChild(td3);
+	tr.appendChild(td4);
+	tr.appendChild(td5);
+	tr.appendChild(td6);
+	
+	return tr;
+}
+/*
 function populateEnts(container){
 	var url_string = window.location.href;//Get url from browser.
     var url = new URL(url_string);//Make it url object.
@@ -88,9 +185,6 @@ function populateEnts(container){
 
     var entsTable = createEntTable(ent);
     article.append(entsTable);
-	
-	
-
 }
 
 function createEntTable(ent) {
@@ -113,8 +207,9 @@ function createEntsTableHeader (species, age, plantYear, mobile, nests, button){
             .append($("<th class=\"birds\"></th>").text("birds"))
             .append($("<th class=\"count\"></th>").text("count")))
 		.append($("<th></th>").text(button));
-}
+}*/
 
+/*
 function createRowsInEntTable(species, age, plantYear, mobile, nest, add) {
     return $("<tr></tr>").append($("<td></td>").text(species))
         .append($("<td></td>").text(age))
@@ -124,16 +219,14 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest, add) {
         .append($("<td class=\"count\"></td>").text(nest.count))
 		.append($("<td class=\"button\"></td>")
 			.append($("<input type=\"checkbox\" id=\"checkbox\" value=add/>")));
-}
+}*/
 
+/*
 function createListHeader(h, text) {
     return $("<div></div>").append($(h).text(text));
 }
 
-function addEntToList(species) {
-	
-}
-
+*/
 
 
 

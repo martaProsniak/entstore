@@ -80,7 +80,7 @@ section {
 	text-align: center;
 }
 
-#entList {
+div.userList {
 	width: 150px;
 	min-height: 300px;
 	margin: 0px 35px 20px 35px;
@@ -106,7 +106,7 @@ footer {
 	background-color: #293e08;
 }
 
-table.speciesTable {
+table.entsTable {
     text-align: center;
     margin: 20px 20px 20px 0px;
 	min-width: 700px;
@@ -114,11 +114,11 @@ table.speciesTable {
 	font-size: 18px;
 }
 
-table.speciesTable th, table.speciesTable td {
+table.entsTable th, table.entsTable td {
 	width: 100px;
 }
 
-table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesTable td {
+table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
     border-width: 1px solid #263310;
 	border-radius: 2px;
 }
@@ -131,19 +131,19 @@ table.speciesTable, table.speciesTable tr, table.speciesTable th, table.speciesT
 	padding: 0px;
 }
 
-table.speciesTable th {
+table.entsTable th {
     background-color: #293e08;
 	text-decoration: none;
 	color: #959F86;
 }
 
-table.speciesTable td {
+table.entsTable td {
     background-color: #c9c2a1;
 	text-decoration: none;
 	color: #2a3b0f;
 }
 
-table.speciesTable td.button:hover {
+table.entsTable td.button:hover {
     background-color: #959F86;
 	text-decoration: none;
 	color: #2a3b0f;
@@ -155,7 +155,7 @@ table.speciesTable td.button:hover {
 	transform: scale(0.98);
 }
 
-table.speciesTable input {
+table.entsTable input {
 	background-color: #c9c2a1;
 	text-decoration: none;
 	color: #2a3b0f;
