@@ -92,11 +92,11 @@ function createEntsTable(ent){
 	table.appendChild(caption);
 	table.classList.add("entsTable");
 	
-	table.appendChild(createTableHeaders("species", "age", "plant year", "mobile", "nests", "add"));
+	table.appendChild(createTableHeaders("species", "age", "plant year", "mobile", "nests", "your list:"));
 	
 	for (var index in ents) {
     		ent = ents[index];
-    		table.appendChild(createTableRows(ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests, ent.add));
+    		table.appendChild(createTableRows(ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests, "add"));
     	}
 	
 	return table;
@@ -162,6 +162,7 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	
 	td5.classList.add("birds");
 	td6.classList.add("count");
+	td7.classList.add("button");
 	
 	tr.appendChild(td1);
 	tr.appendChild(td2);
@@ -194,8 +195,9 @@ function populateEnts(container){
 
     var entsTable = createEntTable(ent);
     article.append(entsTable);
-}
+} */
 
+/*
 function createEntTable(ent) {
     var table = $("<table></table>").append($("<caption></caption>")).addClass("speciesTable");
     table.append(createEntsTableHeader("species", "age", "plant year", "mobile", "nests", "add"));
@@ -205,8 +207,8 @@ function createEntTable(ent) {
     		    (ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests, ent.add));
     	}
     return table;
-}
-
+}*/
+/*
 function createEntsTableHeader (species, age, plantYear, mobile, nests, button){
     return $("<tr></tr>").append($("<th></th>").text(species))
         .append($("<th></th>").text(age))
