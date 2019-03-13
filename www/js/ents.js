@@ -123,16 +123,17 @@ function createRowsInEntTable(species, age, plantYear, mobile, nest, add) {
         .append($("<td class=\"birds\"></td>").text(nest.birds))
         .append($("<td class=\"count\"></td>").text(nest.count))
 		.append($("<td class=\"button\"></td>")
-			.append($("<input type=\"checkbox\" name=\"ifAdd\" value=add/>")));
+			.append($("<input type=\"checkbox\" id=\"checkbox\" value=add/>")));
 }
 
 function createListHeader(h, text) {
     return $("<div></div>").append($(h).text(text));
 }
 
-function addEntToList(container){
+function addEntToList(species) {
 	
 }
+
 
 
 
