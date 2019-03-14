@@ -62,7 +62,10 @@ var ents = [
 ];
 
 
-
+/**
+*
+* Creates elements in section
+*/
 function populateEnts(container){
 	var url_string = window.location.href;//Get url from browser.
     var url = new URL(url_string);//Make it url object.
@@ -95,12 +98,15 @@ function populateEnts(container){
 			}
 		);
 	}
-	/*
-	$(document).click(function(event) 
-		{var targetId = $(event.target).attr("id");}
-	);*/
+
 }
 
+/**
+*
+* Finds chosen ent
+*
+* @returns New 'li' element
+*/
 function addEntToUserList(){
 	
 	var clickedButton = event.srcElement.id;
@@ -112,12 +118,19 @@ function addEntToUserList(){
 	
 	return itemOnList;
 }
-
+/**
+*
+* Create ents table
+*
+* @param {Ent} ent 
+* @returns New 'table' element
+*/
 
 function createEntsTable(ent){
 	var table = document.createElement("table");
 	
 	var caption = document.createElement("caption");
+	caption.setAttribute("id", "title");
 	caption.innerText = "Availlable ents:";
 	table.appendChild(caption);
 	table.classList.add("entsTable");
@@ -132,6 +145,13 @@ function createEntsTable(ent){
 	
 	return table;
 }
+
+/**
+*
+* Creates header in ents table
+*
+* @returns New 'tr' element
+*/
 
 function createTableHeaders (species, age, plantYear, mobile, nests, button) {
 	var tr = document.createElement("tr");
@@ -173,6 +193,13 @@ function createTableHeaders (species, age, plantYear, mobile, nests, button) {
 	return tr;
 }
 
+/**
+*
+* Creates rows with ents in ents table
+*
+* @returns New 'tr' element
+*/
+
 function createTableRows(species, age, plantYear, mobile, nest, button){
 	var tr = document.createElement("tr");
 	var td1 = document.createElement("td");
@@ -205,6 +232,8 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	
 	return tr;
 }
+
+// ***************************** JQuery *****************
 
 /*
 function populateEnts(container){

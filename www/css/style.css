@@ -106,6 +106,13 @@ footer {
 	background-color: #293e08;
 }
 
+#title {
+	background-color: #1E1C14;
+	color: #959F86;
+	border-radius: 5px 5px 5px 5px;
+	border-color: #1E1C14;
+}
+
 table.entsTable {
     text-align: center;
     margin: 20px 20px 20px 0px;
