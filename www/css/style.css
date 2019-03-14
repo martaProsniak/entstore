@@ -88,25 +88,28 @@ section {
 	background-color: #E0DAAC;
 	border: 2px solid #423629;
 	border-radius: 5px;
+
 }
 
 #listHeader {
 	background-color: #298612;
 	color: #03440C;
-	border-radius: 5px;
 	border-color: #63C132;
+	border-bottom: 4px solid #423629;
 	font-weight: 700;
 	height: 40px;
 	text-align: center;
 	padding-top: 10px;
 	width: 150px;
 	font-size: 20px;
+	border-radius: 2px;
 }
 
 #userList {
 	list-style-type: none;
 	margin: 0px;
 	padding: 1px;
+
 }
 
 #userList li {
@@ -138,6 +141,7 @@ footer {
 	text-align: center;
 	padding-top: 10px;
 	font-size: 20px;
+	border-radius: 2px;
 }
 
 
@@ -168,7 +172,7 @@ table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
 }
 
 table.entsTable th {
-    background-color: #63C132;
+    background-color: #FDE74C;
 	text-decoration: none;
 	color: #423629;
 }
