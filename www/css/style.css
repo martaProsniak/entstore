@@ -59,14 +59,14 @@ nav ul li a {
     padding: 5px;
     text-decoration: none;
     font-size: 25px;
-	color: #E0DAAC;
+	color: #63C132;
     text-transform: capitalize;
 }
 
 nav ul li a:hover {
-    background-color: #E0DAAC;
+    background-color: #FDE74C;
     text-decoration: none;
-	color: #298612;
+	color: #423629;
 	-moz-transform: rotate(3deg);
 	-webkit-transform: rotate(3deg);
 	-o-transform: rotate(3deg);
@@ -90,7 +90,30 @@ section {
 	border-radius: 5px;
 }
 
+#listHeader {
+	background-color: #298612;
+	color: #03440C;
+	border-radius: 5px;
+	border-color: #63C132;
+	font-weight: 700;
+	height: 40px;
+	text-align: center;
+	padding-top: 10px;
+	width: 150px;
+	font-size: 20px;
+}
 
+#userList {
+	list-style-type: none;
+	margin: 0px;
+	padding: 1px;
+}
+
+#userList li {
+	display: block;
+	text-decoration: none;
+	border-bottom: 2px dotted #423629;
+}	
 
 
 h4 {
@@ -108,25 +131,16 @@ footer {
 
 #title {
 	background-color: #298612;
-	color: #63C132;
+	color: #03440C;
 	border: 2px solid #423629;
-	font-style: bold;
+	font-weight: 700;
 	height: 40px;
 	text-align: center;
 	padding-top: 10px;
+	font-size: 20px;
 }
 
-#listHeader {
-	background-color: #298612;
-	color: #63C132;
-	border-radius: 5px;
-	border-color: #1B140D;
-	font-style: bold;
-	height: 40px;
-	text-align: center;
-	padding-top: 10px;
-	width: 150px;
-}
+
 
 table.entsTable {
     text-align: center;
@@ -154,9 +168,9 @@ table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
 }
 
 table.entsTable th {
-    background-color: #FDE74C;
+    background-color: #63C132;
 	text-decoration: none;
-	color: #03440C;
+	color: #423629;
 }
 
 table.entsTable td {
@@ -183,3 +197,5 @@ table.entsTable input {
 	color: #2a3b0f;
 	cursor: pointer;
 }
+
+

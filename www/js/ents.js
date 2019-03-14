@@ -35,7 +35,7 @@ var ents = [
 		"plantYear": 1810,
 		"mobile": "yes",
 		"nests": {
-				"birds": "mockingbirds",
+				"birds": "crows",
 				"count": 6
 		}
 	},
