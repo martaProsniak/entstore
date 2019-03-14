@@ -76,44 +76,41 @@ function populateEnts(container){
 	entAside = document.createElement("aside");
 	article.appendChild(entAside);
 	
-	userList = document.createElement("div");
-	userList.classList.add("userList");
+	userList = document.createElement("ul");
+	userList.setAttribute("id", "userList");
 	entAside.appendChild(userList);
 	
 	var entsTable = createEntsTable(ent);
 	article.appendChild(entsTable);
 	
-	var parag = document.createElement("p");
-	parag.classList.add("parag");
-	
 	var buttons = document.getElementsByClassName("button");
 	
-	console.log(buttons);
 	
 	for (var i=0; i<buttons.length; i++) {
 		var buttonId = "button" + i;
 		buttons[i].setAttribute("id", buttonId); 
 		buttons[i].addEventListener("click", function() 
 			{ 
-				addEntToUserList(parag, text); 
+				$("#userList").append($(addEntToUserList())); 
 			}
 		);
 	}
-	
+	/*
 	$(document).click(function(event) 
-		{var text = $(event.target).attr("id");}
-	);
+		{var targetId = $(event.target).attr("id");}
+	);*/
 }
 
-function addEntToUserList(parag, text){
+function addEntToUserList(){
 	
-	document.getElementByClassName("userList");
+	var clickedButton = event.srcElement.id;
 	
-	var buttonId = text;
-	var index = buttonId.substr(7);
+	var index = clickedButton.substr(6,1);
 	chosenEnt = ents[index];
-	container.appendChild(p);
-	p.innerHTML = ent.species;
+	
+	var itemOnList = $("<li></li>").text(chosenEnt.species);
+	
+	return itemOnList;
 }
 
 
