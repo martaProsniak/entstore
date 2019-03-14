@@ -6,9 +6,9 @@ body {
 }
 
 #solid_background {
-	background-color: #3a4f19;
-	border-radius: 75px 75px 0px 0px;
-	border-color: #3a4f19;
+	background-color: #423629;
+	border-radius: 50px 50px 0px 0px;
+	border-color: 423629;
 	min-height: 600px;
 	font-family: 'Arima Madurai', cursive;
 }
@@ -21,9 +21,9 @@ header {
 	text-align: center;
 	text-margin: auto;
 	padding: 5px;
-	background-color: #c9c2a1;
-	border-color: #775c39;
-	border-radius: 75px 75px 0px 0px;
+	background-color: #63C132;
+	border-color: #FDE74C;
+	border-radius: 50px 50px 0px 0px;
 	font-family: 'Great Vibes', cursive;
 }
 
@@ -34,7 +34,7 @@ header a {
 h1 {
 	letter-spacing: 3px;
 	font-size: 40px;
-	color: #2a3b0f;
+	color: #03440C;
 }
 
 nav {
@@ -59,14 +59,14 @@ nav ul li a {
     padding: 5px;
     text-decoration: none;
     font-size: 25px;
-	color: #a8ba8d;
+	color: #E0DAAC;
     text-transform: capitalize;
 }
 
 nav ul li a:hover {
-    background-color: #c9c2a1;
+    background-color: #E0DAAC;
     text-decoration: none;
-	color: #2a3b0f;
+	color: #298612;
 	-moz-transform: rotate(3deg);
 	-webkit-transform: rotate(3deg);
 	-o-transform: rotate(3deg);
@@ -80,17 +80,17 @@ section {
 	text-align: center;
 }
 
-#userList {
+#aside {
 	width: 150px;
-	min-height: 300px;
+	min-height: 350px;
 	margin: 0px 35px 20px 35px;
 	float: left;
-	background-color: #c9c2a1;
-	border-width: 1px;
-    border-style: solid;
-    border-color: #959F86;
-	border-radius: 2px;
+	background-color: #E0DAAC;
+	border: 2px solid #423629;
+	border-radius: 5px;
 }
+
+
 
 
 h4 {
@@ -101,16 +101,31 @@ h4 {
 footer {
     clear: both;
 	text-align: center;
-	color: #959F86;
+	color: #E0DAAC;
 	height: 50px;
-	background-color: #293e08;
+	background-color: #1B140D;
 }
 
 #title {
-	background-color: #1E1C14;
-	color: #959F86;
-	border-radius: 5px 5px 5px 5px;
-	border-color: #1E1C14;
+	background-color: #298612;
+	color: #63C132;
+	border: 2px solid #423629;
+	font-style: bold;
+	height: 40px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#listHeader {
+	background-color: #298612;
+	color: #63C132;
+	border-radius: 5px;
+	border-color: #1B140D;
+	font-style: bold;
+	height: 40px;
+	text-align: center;
+	padding-top: 10px;
+	width: 150px;
 }
 
 table.entsTable {
@@ -126,7 +141,7 @@ table.entsTable th, table.entsTable td {
 }
 
 table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
-    border-width: 1px solid #263310;
+    border: 2px solid #423629;
 	border-radius: 2px;
 }
 
@@ -139,21 +154,21 @@ table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
 }
 
 table.entsTable th {
-    background-color: #293e08;
+    background-color: #FDE74C;
 	text-decoration: none;
-	color: #959F86;
+	color: #03440C;
 }
 
 table.entsTable td {
-    background-color: #c9c2a1;
+    background-color: #E0DAAC;
 	text-decoration: none;
-	color: #2a3b0f;
+	color: #1E1C14;
 }
 
 table.entsTable td.button:hover {
-    background-color: #959F86;
+    background-color: #63C132;
 	text-decoration: none;
-	color: #2a3b0f;
+	color: #FDE74C;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);

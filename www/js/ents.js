@@ -77,7 +77,13 @@ function populateEnts(container){
 	container.appendChild(article);
 	
 	entAside = document.createElement("aside");
+	entAside.setAttribute("id", "aside");
 	article.appendChild(entAside);
+	
+	asideHeader = document.createElement("caption");
+	asideHeader.innerHTML = "Your list: ";
+	asideHeader.setAttribute("id", "listHeader");
+	entAside.appendChild(asideHeader);
 	
 	userList = document.createElement("ul");
 	userList.setAttribute("id", "userList");
