@@ -82,7 +82,40 @@ function populateEnts(container){
 	
 	var entsTable = createEntsTable(ent);
 	article.appendChild(entsTable);
+	
+	var parag = document.createElement("p");
+	parag.classList.add("parag");
+	
+	var buttons = document.getElementsByClassName("button");
+	
+	console.log(buttons);
+	
+	for (var i=0; i<buttons.length; i++) {
+		var buttonId = "button" + i;
+		buttons[i].setAttribute("id", buttonId); 
+		buttons[i].addEventListener("click", function() 
+			{ 
+				addEntToUserList(parag, text); 
+			}
+		);
+	}
+	
+	$(document).click(function(event) 
+		{var text = $(event.target).attr("id");}
+	);
 }
+
+function addEntToUserList(parag, text){
+	
+	document.getElementByClassName("userList");
+	
+	var buttonId = text;
+	var index = buttonId.substr(7);
+	chosenEnt = ents[index];
+	container.appendChild(p);
+	p.innerHTML = ent.species;
+}
+
 
 function createEntsTable(ent){
 	var table = document.createElement("table");
@@ -96,7 +129,8 @@ function createEntsTable(ent){
 	
 	for (var index in ents) {
     		ent = ents[index];
-    		table.appendChild(createTableRows(ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests, "add"));
+			var trEnt = createTableRows(ent.species, ent.age, ent.plantYear, ent.mobile, ent.nests, "add")
+    		table.appendChild(trEnt);
     	}
 	
 	return table;
@@ -174,6 +208,7 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	
 	return tr;
 }
+
 /*
 function populateEnts(container){
 	var url_string = window.location.href;//Get url from browser.
