@@ -260,7 +260,7 @@ table.entsTable input {
 .label {
     float: left;
 	margin: 10px;
-	width: 150px;
+	width: 200px;
 	border: 1px solid black;
 	height: 30px;
 }
@@ -270,8 +270,20 @@ form input, form select {
     border: 1px solid;
 }
 
+form input[type=reset], form input[type=submit] {
+    width: 200px;
+}
+
 form input[type=reset]:hover, form input[type=submit]:hover {
-    background-color: chocolate;
+    background-color: #63C132;
+	text-decoration: none;
+	color: #FDE74C;
+	cursor: pointer;
+	-moz-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	-o-transform: scale(0.98);
+	-ms-transform: scale(0.98);
+	transform: scale(0.98);
 }
 
 

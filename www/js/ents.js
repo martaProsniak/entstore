@@ -287,6 +287,16 @@ function createForm(container){
 	clear4 = document.createElement("div");
 	clear4.setAttribute("style", "clear:both;");
 	fields.appendChild(clear4);
+	
+	res = document.createElement("input");
+	res.setAttribute("type", "reset");
+	res.setAttribute("value", "reset form");
+	fields.appendChild(res);
+	
+	subform = document.createElement("input");
+	subform.setAttribute("type", "submit");
+	subform.setAttribute("value", "send form");
+	fields.appendChild(subform);
 }
 
 /**
