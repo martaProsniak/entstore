@@ -213,7 +213,8 @@ function createForm(container){
 	
 	mail = document.createElement("input");
 	mail.classList.add("userInput");
-	mail.setAttribute("type", "e-mail");
+	mail.setAttribute("name", "email");
+	mail.setAttribute("type", "email");
 	mail.setAttribute("required", "true");
 	fields.appendChild(mail);
 	
@@ -268,6 +269,7 @@ function createForm(container){
 	
 	addr = document.createElement("input");
 	addr.classList.add("userInput");
+	addr.setAttribute("name", "address");
 	addr.setAttribute("required", "true");
 	fields.appendChild(addr);
 	
@@ -300,6 +302,43 @@ function createForm(container){
 	subform.setAttribute("value", "send form");
 	fields.appendChild(subform);
 }
+
+/**
+*	
+* Creates contact form sent information
+*
+*/
+
+function getFormInfo(container){
+	
+	article = $("<article></article>");
+    $(container).append(article);
+	
+	var userEnt = $("#userEnt").val();
+	p1 = $("<p></p");
+    $(article).append(p1).text(userEnt);
+	
+	/*
+	var container = document.getElementById(container);
+	ent = ents[ent];
+	article = document.createElement("article");
+	container.appendChild(article);
+	
+	entAside = document.createElement("aside");
+	entAside.setAttribute("id", "aside");
+	article.appendChild(entAside);
+	
+	asideHeader = document.createElement("caption");
+	asideHeader.innerHTML = "Your list: ";
+	asideHeader.setAttribute("id", "listHeader");
+	entAside.appendChild(asideHeader);
+	
+	userList = document.createElement("ul");
+	userList.setAttribute("id", "userList");
+	entAside.appendChild(userList);*/
+}
+
+
 
 /**
 *
