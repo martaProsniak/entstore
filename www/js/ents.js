@@ -100,7 +100,7 @@ function populateEnts(container){
 		buttons[i].setAttribute("id", buttonId); 
 		buttons[i].addEventListener("click", function() 
 			{ 
-				$("#userList").append($(addEntToUserList())); 
+				$("#userList").append($(addEntToUserListPlus())); 
 			}
 		);
 	}
@@ -109,7 +109,7 @@ function populateEnts(container){
 
 /**
 *
-* Finds chosen ent
+* Finds chosen ent and put it on the list
 *
 * @returns New 'li' element
 */
@@ -121,9 +121,174 @@ function addEntToUserList(){
 	chosenEnt = ents[index];
 	
 	var itemOnList = $("<li></li>").text(chosenEnt.species);
-	
+
 	return itemOnList;
 }
+
+/**
+*
+* Finds chosen ent and put it on the list
+* Additional feature allows removing ens from the list
+* @returns New 'li' element
+*/
+function addEntToUserListPlus(){
+	
+	var clickedButton = event.srcElement.id;
+	
+	var index = clickedButton.substr(6,1);
+	chosenEnt = ents[index];
+	
+	var itemOnList = $("<li></li>").text(chosenEnt.species);
+	
+	$(itemOnList).click(function () 
+		{
+			removeFromList();
+		}
+	);
+
+	return itemOnList;
+}
+
+/**
+*	
+* Removes ent from userList
+*
+*/
+function removeFromList(){
+	$(event.target).remove();
+}
+
+/**
+*	
+* Creates contact form
+*
+*/
+function createForm(container){
+	var container = document.getElementById(container);
+	var article = document.createElement("article");
+	article.setAttribute("id", "contactContainer");
+	container.appendChild(article);
+	
+	var formHeader = document.createElement("header");
+	formHeader.setAttribute("id", "formHeader");
+	formHeader.innerHTML = "Contact";
+	article.appendChild(formHeader);
+	
+	contactForm = document.createElement("form");
+	contactForm.setAttribute("id", "contactForm");
+	article.appendChild(contactForm);
+	
+	fields = document.createElement("fieldset");
+	fields.setAttribute("id", "fields");
+	contactForm.appendChild(fields);
+	
+	span1 = document.createElement("span");
+	span1.innerHTML = "species:"
+	span1.classList.add("label");
+	fields.appendChild(span1);
+	
+	selectEnt = document.createElement("select");
+	selectEnt.setAttribute("name", "selected");
+	selectEnt.setAttribute("required", "true");
+	fields.appendChild(selectEnt);
+	
+	for (var index in ents) {
+    		ent = ents[index];
+			opt = document.createElement("option");
+			opt.setAttribute("value" , "ent"+index);
+			opt.innerHTML = ent.species;
+			selectEnt.appendChild(opt);
+    	}
+		
+	clear1 = document.createElement("div");
+	clear1.setAttribute("style", "clear:both;");
+	fields.appendChild(clear1);
+	
+	span2 = document.createElement("span");
+	span2.innerHTML = "e-mail:"
+	span2.classList.add("label");
+	fields.appendChild(span2);
+	
+	mail = document.createElement("input");
+	mail.classList.add("userInput");
+	mail.setAttribute("type", "e-mail");
+	mail.setAttribute("required", "true");
+	fields.appendChild(mail);
+	
+	clear1 = document.createElement("div");
+	clear1.setAttribute("style", "clear:both;");
+	fields.appendChild(clear1);
+	
+	span3 = document.createElement("span");
+	span3.innerHTML = "delivery"
+	span3.classList.add("label");
+	fields.appendChild(span3);
+	
+	delivery1 = document.createElement("input");
+	delivery1.setAttribute("type", "radio");
+	delivery1.setAttribute("name", "delivery");
+	delivery1.setAttribute("value", "ship");
+	delivery1.setAttribute("checked", "true");
+	fields.appendChild(delivery1);
+	del1 = document.createElement("span");
+	del1.classList.add("delivery");
+	del1.innerHTML = "ship";
+	fields.appendChild(del1);
+	
+	delivery2 = document.createElement("input");
+	delivery2.setAttribute("type", "radio");
+	delivery2.setAttribute("name", "delivery");
+	delivery2.setAttribute("value", "post");
+	fields.appendChild(delivery2);
+	del2 = document.createElement("span");
+	del2.classList.add("delivery");
+	del2.innerHTML = "post";
+	fields.appendChild(del2);
+	
+	delivery3 = document.createElement("input");
+	delivery3.setAttribute("type", "radio");
+	delivery3.setAttribute("name", "delivery");
+	delivery3.setAttribute("value", "courier");
+	fields.appendChild(delivery3);
+	del3 = document.createElement("span");
+	del3.classList.add("delivery");
+	del3.innerHTML = "courier";
+	fields.appendChild(del3);
+	
+	clear2 = document.createElement("div");
+	clear2.setAttribute("style", "clear:both;");
+	fields.appendChild(clear2);
+	
+	span4 = document.createElement("span");
+	span4.innerHTML = "delivery address:"
+	span4.classList.add("label");
+	fields.appendChild(span4);
+	
+	addr = document.createElement("input");
+	addr.classList.add("userInput");
+	addr.setAttribute("required", "true");
+	fields.appendChild(addr);
+	
+	clear3 = document.createElement("div");
+	clear3.setAttribute("style", "clear:both;");
+	fields.appendChild(clear3);
+	
+	span5 = document.createElement("span");
+	span5.innerHTML = "package color:"
+	span5.classList.add("label");
+	fields.appendChild(span5);
+	
+	packageColor = document.createElement("input");
+	addr.classList.add("packageColor");
+	packageColor.setAttribute("name", "color");
+	packageColor.setAttribute("type", "color");
+	fields.appendChild(packageColor);
+	
+	clear4 = document.createElement("div");
+	clear4.setAttribute("style", "clear:both;");
+	fields.appendChild(clear4);
+}
+
 /**
 *
 * Create ents table

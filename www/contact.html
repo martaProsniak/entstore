@@ -12,6 +12,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Arima+Madurai" rel="stylesheet">
 		<link rel="stylesheet" href="css/fontello.css" type="text/css" />
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+		<script src="js/ents.js"></script>
 	</head>
 	<body>
 		<div id="solid_background">
@@ -30,12 +31,58 @@
 					<li><a href="contact.html">contact</a></li>
 				</ul>
 			</nav>
-			<section>
-				This will be contact form!
+			<section id = "main">
+			<!--	 <header><h2>Contact</h2></header>
+            <form style="width:500px" action="contact_form_sent.html" method="get">
+			Formularz
+				• adres email,
+				• gatunek (wybór kilku predefiniowanych),
+				• forma dostawy (wybór jednej z predefiniowanych),
+				• adres dostawy,
+				• kolor opakowania. 
+                <fieldset>
+                    <legend>Contact form:</legend>
+					<legend> 
+					
+                    Subject: <select name="subject" required="true">
+                        <option value="buy">Want to buy book.</option>
+                        <option value="other">Other.</option>
+                    </select>
+                    <fieldset>
+                        <legend>Info:</legend>
+                        <span class="label" style="width: 50px">name: </span>
+                        <input name="name" type="text"/><br/>
+                        <span class="label" style="width: 50px">e-mail: </span>
+                        <input name="email" type="email" required="true"/><br/>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Additional info:</legend>
+                        <span class="label" style="width: 100px">favourite color:</span>
+                        <input type="color" name="color" style="height:15px;"/><br/>
+                        <span class="label" style="width: 100px">gender:</span>
+                        <input type="radio" name="gender" value="male" />Male
+                        <input type="radio" name="gender" value="female"/>Female
+                        <input type="radio" name="gender" value="other" checked="true"/>Other<br/>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Interests:</legend>
+                        <input type="checkbox" name="interest" value="fantasy"/>fantasy<br/>
+                        <input type="checkbox" name="interest" value="horror"/>horror<br/>
+                        <input type="checkbox" name="interest" value="s-f"/>s-f<br/>
+                    </fieldset>
+                    <input name="agree" type="checkbox" required="true"/> agree to contact terms<br/>
+                    <input type="reset" value="Reset form"/><input type="submit" value="Send form"/>
+                </fieldset>
+            </form> -->
 			</section>
 			<footer>
 				No ents were harmed during creating this website<br>&copy; Copyright 2019
 			</footer>
 		</div>
 	</body>
+	<script>
+		$(window).on("load", function() {
+		createForm('main');
+		});
+	</script>
 </html>
