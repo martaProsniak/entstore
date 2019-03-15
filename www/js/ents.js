@@ -176,6 +176,8 @@ function createForm(container){
 	
 	contactForm = document.createElement("form");
 	contactForm.setAttribute("id", "contactForm");
+	contactForm.setAttribute("action", "contact_form_sent.html");
+	contactForm.setAttribute("Method", "=\"get\"");
 	article.appendChild(contactForm);
 	
 	fields = document.createElement("fieldset");
