@@ -207,28 +207,20 @@ function createForm(container){
 	
 	createSpan("e-mail:", "label");
 	createInputFieldWithType ("userInput", "email", "email");
-	
 	fields.appendChild(createClearDiv());
-	
 	createSpan("delivery:", "label");
-	
 	createDeliveryInput ("ship");
 	createSpan("ship", "delivery");
 	createDeliveryInput ("post");
 	createSpan("post", "delivery");
 	createDeliveryInput ("courier");
 	createSpan("courier", "delivery");
-	
 	fields.appendChild(createClearDiv());
-	
 	createSpan("address:", "label");
 	createInputField("userInput", "address");
-
 	fields.appendChild(createClearDiv());
-	
 	createSpan("package color:", "label");
 	createInputFieldWithType ("packageColor", "color", "color");
-	
 	fields.appendChild(createClearDiv());
 	
 	res = document.createElement("input");
@@ -251,14 +243,21 @@ function createClearDiv(){
 	clearDiv.setAttribute("style", "clear:both;");
 	return clearDiv;
 }
-
+/**
+ * Creates span with form headers
+ * 
+ */
 function createSpan(text, className){
 	fSpan = document.createElement("span");
 	fSpan.innerHTML = text;
 	fSpan.classList.add(className);
 	fields.appendChild(fSpan);
 }
-
+/**
+ * 
+ * Creates radio inputs
+ * 
+ */
 function createDeliveryInput (value){
 	deliveryIn = document.createElement("input");
 	deliveryIn.setAttribute("type", "radio");
@@ -267,7 +266,11 @@ function createDeliveryInput (value){
 	deliveryIn.setAttribute("checked", "true");
 	fields.appendChild(deliveryIn);
 }
-
+/**
+ * 
+ * Creates input with attributes: class, name and type
+ * 
+ */
 function createInputFieldWithType (className, name, type){
 	inputField = document.createElement("input");
 	inputField.classList.add(className);
@@ -276,7 +279,10 @@ function createInputFieldWithType (className, name, type){
 	inputField.setAttribute("required", "true");
 	fields.appendChild(inputField);
 }
-
+/**
+ * 
+ * Creates input with attributes: class, name
+ */
 function createInputField (className, name){
 	inputField = document.createElement("input");
 	inputField.classList.add(className);
@@ -287,10 +293,9 @@ function createInputField (className, name){
 
 /**
 *	
-* Creates contact form sent information
+* Creates contact form sent information (using jQuery)
 *
 */
-
 function showFormData(){
 
 	$("#main").append($("<article id=\"dataContainer\"></article>"));
@@ -302,7 +307,13 @@ function showFormData(){
 	$("#userInfo").append($("<li></li>").text("address: " + getUrlParams('address')));
 	$("#userInfo").append($("<li style=\"color:"+getUrlParams('color')+";\"></li>").text("color: "+getUrlParams('color')));
 }
-
+/**
+*	
+* Gets info data contact form
+*
+*@returns parameter
+*
+*/
 function getUrlParams( prop ) {
     var params = {};
     var search = decodeURIComponent( window.location.href.slice( window.location.href.indexOf( '?' ) + 1 ) );
