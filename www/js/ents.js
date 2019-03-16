@@ -184,10 +184,7 @@ function createForm(container){
 	fields.setAttribute("id", "fields");
 	contactForm.appendChild(fields);
 	
-	span1 = document.createElement("span");
-	span1.innerHTML = "species:"
-	span1.classList.add("label");
-	fields.appendChild(span1);
+	createSpan("species:", "label");
 	
 	selectEnt = document.createElement("select");
 	selectEnt.setAttribute("name", "selected");
@@ -202,95 +199,33 @@ function createForm(container){
 			selectEnt.appendChild(opt);
     	}
 		
-	clear1 = document.createElement("div");
-	clear1.setAttribute("style", "clear:both;");
-	fields.appendChild(clear1);
+	fields.appendChild(createClearDiv());
 	
-	span2 = document.createElement("span");
-	span2.innerHTML = "e-mail:"
-	span2.classList.add("label");
-	fields.appendChild(span2);
+	createSpan("e-mail:", "label");
+	createInputFieldWithType ("userInput", "email", "email");
 	
-	mail = document.createElement("input");
-	mail.classList.add("userInput");
-	mail.setAttribute("name", "email");
-	mail.setAttribute("type", "email");
-	mail.setAttribute("required", "true");
-	fields.appendChild(mail);
+	fields.appendChild(createClearDiv());
 	
-	clear1 = document.createElement("div");
-	clear1.setAttribute("style", "clear:both;");
-	fields.appendChild(clear1);
+	createSpan("delivery:", "label");
 	
-	span3 = document.createElement("span");
-	span3.innerHTML = "delivery"
-	span3.classList.add("label");
-	fields.appendChild(span3);
+	createDeliveryInput ("ship");
+	createSpan("ship", "delivery");
+	createDeliveryInput ("post");
+	createSpan("post", "delivery");
+	createDeliveryInput ("courier");
+	createSpan("courier", "delivery");
 	
-	delivery1 = document.createElement("input");
-	delivery1.setAttribute("type", "radio");
-	delivery1.setAttribute("name", "delivery");
-	delivery1.setAttribute("value", "ship");
-	delivery1.setAttribute("checked", "true");
-	fields.appendChild(delivery1);
-	del1 = document.createElement("span");
-	del1.classList.add("delivery");
-	del1.innerHTML = "ship";
-	fields.appendChild(del1);
+	fields.appendChild(createClearDiv());
 	
-	delivery2 = document.createElement("input");
-	delivery2.setAttribute("type", "radio");
-	delivery2.setAttribute("name", "delivery");
-	delivery2.setAttribute("value", "post");
-	fields.appendChild(delivery2);
-	del2 = document.createElement("span");
-	del2.classList.add("delivery");
-	del2.innerHTML = "post";
-	fields.appendChild(del2);
+	createSpan("address:", "label");
+	createInputField("userInput", "address");
+
+	fields.appendChild(createClearDiv());
 	
-	delivery3 = document.createElement("input");
-	delivery3.setAttribute("type", "radio");
-	delivery3.setAttribute("name", "delivery");
-	delivery3.setAttribute("value", "courier");
-	fields.appendChild(delivery3);
-	del3 = document.createElement("span");
-	del3.classList.add("delivery");
-	del3.innerHTML = "courier";
-	fields.appendChild(del3);
+	createSpan("package color:", "label");
+	createInputFieldWithType ("packageColor", "color", "color");
 	
-	clear2 = document.createElement("div");
-	clear2.setAttribute("style", "clear:both;");
-	fields.appendChild(clear2);
-	
-	span4 = document.createElement("span");
-	span4.innerHTML = "delivery address:"
-	span4.classList.add("label");
-	fields.appendChild(span4);
-	
-	addr = document.createElement("input");
-	addr.classList.add("userInput");
-	addr.setAttribute("name", "address");
-	addr.setAttribute("required", "true");
-	fields.appendChild(addr);
-	
-	clear3 = document.createElement("div");
-	clear3.setAttribute("style", "clear:both;");
-	fields.appendChild(clear3);
-	
-	span5 = document.createElement("span");
-	span5.innerHTML = "package color:"
-	span5.classList.add("label");
-	fields.appendChild(span5);
-	
-	packageColor = document.createElement("input");
-	addr.classList.add("packageColor");
-	packageColor.setAttribute("name", "color");
-	packageColor.setAttribute("type", "color");
-	fields.appendChild(packageColor);
-	
-	clear4 = document.createElement("div");
-	clear4.setAttribute("style", "clear:both;");
-	fields.appendChild(clear4);
+	fields.appendChild(createClearDiv());
 	
 	res = document.createElement("input");
 	res.setAttribute("type", "reset");
@@ -302,12 +237,49 @@ function createForm(container){
 	subform.setAttribute("value", "send form");
 	fields.appendChild(subform);
 }
-/*
-function showFormData(){
 
-	var data = $("form").serialize();
-	$("#main").text(data);
-}*/
+/**
+ * Creates div to arrange form
+ * @returns div
+ */
+function createClearDiv(){
+	clearDiv = document.createElement("div");
+	clearDiv.setAttribute("style", "clear:both;");
+	return clearDiv;
+}
+
+function createSpan(text, className){
+	fSpan = document.createElement("span");
+	fSpan.innerHTML = text;
+	fSpan.classList.add(className);
+	fields.appendChild(fSpan);
+}
+
+function createDeliveryInput (value){
+	deliveryIn = document.createElement("input");
+	deliveryIn.setAttribute("type", "radio");
+	deliveryIn.setAttribute("name", "delivery");
+	deliveryIn.setAttribute("value", value);
+	deliveryIn.setAttribute("checked", "true");
+	fields.appendChild(deliveryIn);
+}
+
+function createInputFieldWithType (className, name, type){
+	inputField = document.createElement("input");
+	inputField.classList.add(className);
+	inputField.setAttribute("name", name);
+	inputField.setAttribute("type", type);
+	inputField.setAttribute("required", "true");
+	fields.appendChild(inputField);
+}
+
+function createInputField (className, name){
+	inputField = document.createElement("input");
+	inputField.classList.add(className);
+	inputField.setAttribute("name", name);
+	inputField.setAttribute("required", "true");
+	fields.appendChild(inputField);
+}
 
 /**
 *	
@@ -317,17 +289,14 @@ function showFormData(){
 
 function showFormData(){
 
-
-	$("#main").append("<caption id=\"listHeader\"></caption").text("Your order:");
-	$("#main").append("<article id=\"userPlace\"></article>");
-	$("#userPlace").append("<ul id=\"userList\"></ul>");
-
-	$("#userList").append($("<li></li>").text(getUrlParams('selected')));
-	$("#userList").append($("<li></li>").text(getUrlParams('email')));
-	$("#userList").append($("<li></li>").text(getUrlParams('delivery')));
-	$("#userList").append($("<li></li>").text(getUrlParams('address')));
-	$("#userList").append($("<li></li>").text(getUrlParams('color')));
-
+	$("#main").append($("<article id=\"userPlace\"></article>"));
+	$("#userPlace").append($("<header id=\"listHeader\"></header").text("Your order:"));
+	$("#userPlace").append($("<ul id=\"userList\"></ul>"));
+	$("#userList").append($("<li></li>").text("ent: " + getUrlParams('selected')));
+	$("#userList").append($("<li></li>").text("mail: " + getUrlParams('email')));
+	$("#userList").append($("<li></li>").text("delivery: " + getUrlParams('delivery')));
+	$("#userList").append($("<li></li>").text("address" + getUrlParams('address')));
+	$("#userList").append($("<li></li>").text("color" + getUrlParams('color')));
 }
 
 function getUrlParams( prop ) {
@@ -343,40 +312,13 @@ function getUrlParams( prop ) {
     return ( prop && prop in params ) ? params[ prop ] : params;
 }
 
-
-    
-	
-	
-	/*
-	var container = document.getElementById(container);
-	ent = ents[ent];
-	article = document.createElement("article");
-	container.appendChild(article);
-	
-	entAside = document.createElement("aside");
-	entAside.setAttribute("id", "aside");
-	article.appendChild(entAside);
-	
-	asideHeader = document.createElement("caption");
-	asideHeader.innerHTML = "Your list: ";
-	asideHeader.setAttribute("id", "listHeader");
-	entAside.appendChild(asideHeader);
-	
-	userList = document.createElement("ul");
-	userList.setAttribute("id", "userList");
-	entAside.appendChild(userList);*/
-
-
-
-
 /**
 *
 * Create ents table
-*
 * @param {Ent} ent 
 * @returns New 'table' element
+*
 */
-
 function createEntsTable(ent){
 	var table = document.createElement("table");
 	
