@@ -119,14 +119,14 @@ section {
 #userList li {
 	display: block;
 	text-decoration: none;
-	border-bottom: 2px dotted #01060A;
+	border-bottom: 2px solid #86044B;
 }
 
-#userList li:hover {
+#userList li:hover, form input[type=reset]:hover {
     background-color: #86044B;
 	text-decoration: none;
-	color: #E0DAAC;
-	border-bottom: 2px dotted #E0DAAC;
+	color: #B7C9C6;
+	border: 2px solid #B7C9C6;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);
@@ -198,10 +198,10 @@ table.entsTable td {
     background-color: #A2B2AF;
 }
 
-table.entsTable td.button:hover {
+table.entsTable td.button:hover, form input[type=submit]:hover {
     background-color: #04782F;
 	text-decoration: none;
-	color: #e2c8ad;
+	color: #101111;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);
@@ -258,45 +258,36 @@ table.entsTable input {
 	margin: auto;
 	width: 450px;
 	height: 280px;
+	border: 2px solid #86044B;
 }
 
 .label {
     float: left;
 	margin: 10px;
 	width: 200px;
-	border: 1px solid #01060A;
+	border-bottom: 1px solid #A11361;
 	height: 30px;
+	color: #A11361;
+	font-weight: 600;
 }
 
-form input, form select {
-    /*background-color: tomato;*/
-    border: 1px solid;
-}
 
 form input[type=reset], form input[type=submit] {
-    width: 200px;
+	width: 200px;
+	font-size: 18px;
 }
-
-form input[type=reset]:hover, form input[type=submit]:hover {
-    background-color: #63C132;
-	text-decoration: none;
-	color: #FDE74C;
-	cursor: pointer;
-	-moz-transform: scale(0.98);
-	-webkit-transform: scale(0.98);
-	-o-transform: scale(0.98);
-	-ms-transform: scale(0.98);
-	transform: scale(0.98);
-}
-
 
 
 input {
 	float: left;
 	margin: 10px;
 	width: 200px;
-	border: 1px solid black;
+	border: 1px solid #101111;
+	border-radius: 2px;
 	height: 30px;
+	background-color: #B9CCC8;
+	text-align: center;
+	font-family: 'Arima Madurai', cursive;
 }
 
 input[type="radio"]{
@@ -308,9 +299,13 @@ select {
 	float: left;
 	margin: 10px;
 	width: 200px;
-	border: 1px solid black;
 	height: 30px;
 	font-family: 'Arima Madurai', cursive;
+	border: 1px solid #101111;
+	border-radius: 2px;
+	background-color: #B9CCC8;
+	text-align: center;
+	font-size: 18px;
 }
 
 span.delivery {
@@ -319,4 +314,36 @@ span.delivery {
 	height: 30px;
 	/*border: 1px solid black;*/
 }
+
+select:hover{
+	background-color: #A11361;
+	text-decoration: none;
+	color: #B7C9C6;
+	border: 2px solid #B7C9C6;
+	cursor: pointer;
+	-moz-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	-o-transform: scale(0.98);
+	-ms-transform: scale(0.98);
+	transform: scale(0.98);
+}
+
+#opt{
+	background-color: #B9CCC8;
+	color: #A11361;
+}
+
+#opt:hover{
+	background-color: #A11361;
+	color: #B9CCC8;
+	border: 2px solid #B7C9C6;
+	cursor: pointer;
+	-moz-transform: scale(0.98);
+	-webkit-transform: scale(0.98);
+	-o-transform: scale(0.98);
+	-ms-transform: scale(0.98);
+	transform: scale(0.98);
+}
+
+
 

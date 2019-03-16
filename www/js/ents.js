@@ -195,6 +195,7 @@ function createForm(container){
     		ent = ents[index];
 			opt = document.createElement("option");
 			opt.setAttribute("value" , "ent"+index);
+			opt.setAttribute("id", "opt");
 			opt.innerHTML = ent.species;
 			selectEnt.appendChild(opt);
     	}
