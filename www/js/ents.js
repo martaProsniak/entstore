@@ -309,14 +309,13 @@ function createForm(container){
 *
 */
 
-function getFormInfo(container){
+function showFormData(){
+
+    var str = $( "form" ).serialize();
 	
-	article = $("<article></article>");
-    $(container).append(article);
+    $( "#main" ).text( str );
+  }
 	
-	var userEnt = $("#userEnt").val();
-	p1 = $("<p></p");
-    $(article).append(p1).text(userEnt);
 	
 	/*
 	var container = document.getElementById(container);
@@ -336,7 +335,7 @@ function getFormInfo(container){
 	userList = document.createElement("ul");
 	userList.setAttribute("id", "userList");
 	entAside.appendChild(userList);*/
-}
+
 
 
 
