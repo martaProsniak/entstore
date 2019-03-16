@@ -6,9 +6,9 @@ body {
 }
 
 #solid_background {
-	background-color: #131C1A;
+	background-color: #01060A;
 	border-radius: 10px 10px 0px 0px;
-	border-color: #002E19;
+	border-color: #01060A;
 	min-height: 600px;
 	font-family: 'Arima Madurai', cursive;
 }
@@ -19,10 +19,9 @@ header {
 	margin-top: 25px;
     height: 150px;
 	text-align: center;
-	text-margin: auto;
 	padding: 5px;
-	background-color: #159F63;
-	border-color: #FDE74C;
+	background-color: #047831;
+	border-color: #C77318;
 	border-radius: 10px 10px 0px 0px;
 	font-family: 'Great Vibes', cursive;
 }
@@ -34,7 +33,7 @@ header a {
 h1 {
 	letter-spacing: 3px;
 	font-size: 40px;
-	color: #321F36;
+	color: #101111;
 }
 
 h2 {
@@ -64,14 +63,14 @@ nav ul li a {
     padding: 5px;
     text-decoration: none;
     font-size: 25px;
-	color: #CFB985;
+	color: #B7C9C6;
     text-transform: capitalize;
 }
 
 nav ul li a:hover {
-    background-color: #FDE74C;
+    background-color: #B7C9C6;
     text-decoration: none;
-	color: #423629;
+	color: #01060A;
 	-moz-transform: rotate(3deg);
 	-webkit-transform: rotate(3deg);
 	-o-transform: rotate(3deg);
@@ -90,17 +89,17 @@ section {
 	min-height: 350px;
 	margin: 0px 25px 20px 30px;
 	float: left;
-	background-color: #92AEA2;
-	border: 2px solid #16211F;
+	background-color: #A2B2AF;
+	border: 2px solid #01060A;
 	border-radius: 5px;
 
 }
 
 #listHeader {
-	background-color: #035230;
-	color: #060807;
+	background-color: #119141;
+	color: #01060A;
 	border-color: #63C132;
-	border-bottom: 4px solid #16211F;
+	border-bottom: 4px solid #01060A;
 	font-weight: 700;
 	height: 40px;
 	text-align: center;
@@ -120,13 +119,13 @@ section {
 #userList li {
 	display: block;
 	text-decoration: none;
-	border-bottom: 2px dotted #16211F;
+	border-bottom: 2px dotted #01060A;
 }
 
 #userList li:hover {
-    background-color: #E5AF24;
+    background-color: #86044B;
 	text-decoration: none;
-	color: #FDE74C;
+	color: #E0DAAC;
 	border-bottom: 2px dotted #E0DAAC;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
@@ -145,15 +144,15 @@ h4 {
 footer {
     clear: both;
 	text-align: center;
-	color: #060807;;
+	color: #01060A;;
 	height: 50px;
-	background-color: #035230;
+	background-color: #005F23;
 }
 
 #title {
-	background-color: #035230;
-	color: #060807;
-	border: 2px solid #16211F;
+	background-color: #119141;
+	color: #01060A;
+	border: 2px solid #01060A;
 	font-weight: 700;
 	height: 40px;
 	text-align: center;
@@ -174,13 +173,12 @@ table.entsTable {
 
 table.entsTable th, table.entsTable td {
 	width: 100px;
-	color: #FDE74C;
     text-decoration: none;
     color: #060807;
 }
 
 table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
-    border: 2px solid #16211F;
+    border: 2px solid #01060A;
 	border-radius: 2px;
 }
 
@@ -193,17 +191,17 @@ table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
 }
 
 table.entsTable th {
-    background-color: #E5AF24;
+    background-color: #86044B;
 }
 
 table.entsTable td {
-    background-color: #92AEA2;
+    background-color: #A2B2AF;
 }
 
 table.entsTable td.button:hover {
-    background-color: #63C132;
+    background-color: #04782F;
 	text-decoration: none;
-	color: #FDE74C;
+	color: #e2c8ad;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);
@@ -217,27 +215,32 @@ table.entsTable input {
 	text-decoration: none;
 	color: #2a3b0f;
 	cursor: pointer;
+	border: 2px solid #005F23;
+	border-radius: 2px;
 }
 
 #contactContainer {
-	background-color: #c9c2a1;
 	text-align: center;
     margin: 20px auto 20px auto;
 	width: 500px;
 	height: 400px;
 	font-size: 18px;
+	background-color: #A2B2AF;
+	border: 2px solid #01060A;
+	border-radius: 5px;
 }
 
 #formHeader {
-	margin: auto;
-	background-color: #298612;
-	color: #03440C;
+	background-color: #119141;
+	margin: 0px;
+	color: #01060A;
 	border-color: #63C132;
-	border-bottom: 4px solid #16211F;
+	border-bottom: 4px solid #01060A;
 	font-weight: 700;
 	height: 40px;
 	text-align: center;
-	padding-top: 10px;
+	padding: 10px 0px 0px 0px;
+	width: 500px;
 	font-size: 20px;
 	border-radius: 2px;
 	font-family: 'Arima Madurai', cursive;
@@ -248,6 +251,7 @@ table.entsTable input {
     margin: 20px auto auto auto;
 	width: 500px;
 	height: 300px;
+	
 }
 
 #fields {
@@ -260,7 +264,7 @@ table.entsTable input {
     float: left;
 	margin: 10px;
 	width: 200px;
-	border: 1px solid #16211F;
+	border: 1px solid #01060A;
 	height: 30px;
 }
 
