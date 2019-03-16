@@ -118,7 +118,7 @@ section {
 	border-bottom: 2px solid #86044B;
 }
 
-#userList li:hover, form input[type=reset]:hover {
+#userList li:hover{
     background-color: #86044B;
 	text-decoration: none;
 	color: #B7C9C6;
@@ -194,7 +194,7 @@ table.entsTable td {
     background-color: #A2B2AF;
 }
 
-table.entsTable td.button:hover, form input[type=submit]:hover {
+table.entsTable td.button:hover {
     background-color: #04782F;
 	text-decoration: none;
 	color: #101111;
@@ -267,17 +267,22 @@ table.entsTable input {
 	font-weight: 600;
 }
 
-form input[type=submit] {
-	font-size: 18px;
-	background-color: #B8317B;
-	color:#B7C9C6;
-}
 
-form input[type=reset] {
-	font-size: 18px;
+form input[type=reset], form input[type=submit] {
+	font-size: 16px;
 	background-color: #B7C9C6;
 }
 
+input:hover {
+	cursor: pointer;
+	background-color: #bad6d0;
+	border: 2px solid #B7C9C6;
+	color: #A11361;
+}
+
+span.delivery:hover{
+	color: #A11361;
+}
 
 input {
 	float: left;
@@ -317,9 +322,9 @@ span.delivery {
 }
 
 select:hover{
-	background-color: #A11361;
+	color: #A11361;
 	text-decoration: none;
-	color: #B7C9C6;
+	background-color: #bad6d0;
 	border: 2px solid #B7C9C6;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
