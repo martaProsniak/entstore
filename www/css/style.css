@@ -267,7 +267,6 @@ table.entsTable input {
 	font-weight: 600;
 }
 
-
 form input[type=submit] {
 	font-size: 18px;
 	background-color: #B8317B;
@@ -351,7 +350,7 @@ select:hover{
 	text-align: center;
     margin: 20px auto 20px auto;
 	width: 500px;
-	height: 250px;
+	height: 280px;
 	font-size: 18px;
 	background-color: #A2B2AF;
 	border: 2px solid #01060A;
@@ -362,7 +361,7 @@ select:hover{
 	text-align: center;
     margin: 20px auto 20px auto;
 	width: 300px;
-	height: 150px;
+	height: 200px;
 	font-size: 18px;
 	background-color: #A2B2AF;
 	border-radius: 5px;
@@ -380,6 +379,17 @@ select:hover{
 	border-bottom: 1px solid #86044B;
 	letter-spacing: 2px;
 }
+
+#userColor {
+	border: 1px solid #01060A;
+	border-radius: 2px;
+	letter-spacing: 2px;
+	height: 20px;
+	width: 100px;
+	display: block;
+	margin: 10px auto 10px auto;
+}
+
 #banner{
 	width: 560px;
 	height: 360px;

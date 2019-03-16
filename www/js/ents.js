@@ -305,7 +305,8 @@ function showFormData(){
 	$("#userInfo").append($("<li></li>").text("mail: " + getUrlParams('email')));
 	$("#userInfo").append($("<li></li>").text("delivery: " + getUrlParams('delivery')));
 	$("#userInfo").append($("<li></li>").text("address: " + getUrlParams('address')));
-	$("#userInfo").append($("<li style=\"color:"+getUrlParams('color')+";\"></li>").text("color: "+getUrlParams('color')));
+	$("#userInfo").append($("<li></li>").text("color: "+getUrlParams('color')));
+	$("#userInfo").append($("<span id=\"userColor\"; style=\"background-color:"+getUrlParams('color')+"; \"></span>"));
 }
 /**
 *	
