@@ -77,7 +77,7 @@ function populateEnts(container){
 	container.appendChild(article);
 	
 	entAside = document.createElement("aside");
-	entAside.setAttribute("id", "aside");
+	entAside.setAttribute("id", "userPlace");
 	article.appendChild(entAside);
 	
 	asideHeader = document.createElement("caption");
@@ -302,6 +302,12 @@ function createForm(container){
 	subform.setAttribute("value", "send form");
 	fields.appendChild(subform);
 }
+/*
+function showFormData(){
+
+	var data = $("form").serialize();
+	$("#main").text(data);
+}*/
 
 /**
 *	
@@ -311,10 +317,34 @@ function createForm(container){
 
 function showFormData(){
 
-    var str = $( "form" ).serialize();
-	
-    $( "#main" ).text( str );
-  }
+
+	$("#main").append("<caption id=\"listHeader\"></caption").text("Your order:");
+	$("#main").append("<article id=\"userPlace\"></article>");
+	$("#userPlace").append("<ul id=\"userList\"></ul>");
+
+	$("#userList").append($("<li></li>").text(getUrlParams('selected')));
+	$("#userList").append($("<li></li>").text(getUrlParams('email')));
+	$("#userList").append($("<li></li>").text(getUrlParams('delivery')));
+	$("#userList").append($("<li></li>").text(getUrlParams('address')));
+	$("#userList").append($("<li></li>").text(getUrlParams('color')));
+
+}
+
+function getUrlParams( prop ) {
+    var params = {};
+    var search = decodeURIComponent( window.location.href.slice( window.location.href.indexOf( '?' ) + 1 ) );
+    var definitions = search.split( '&' );
+
+    definitions.forEach( function( val, key ) {
+        var parts = val.split( '=', 2 );
+        params[ parts[ 0 ] ] = parts[ 1 ];
+    } );
+
+    return ( prop && prop in params ) ? params[ prop ] : params;
+}
+
+
+    
 	
 	
 	/*
