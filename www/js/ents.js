@@ -119,8 +119,9 @@ function addEntToUserList(){
 	
 	var index = clickedButton.substr(6,1);
 	chosenEnt = ents[index];
+	var species = chosenEnt.species;
 	
-	var itemOnList = $("<li></li>").text(chosenEnt.species);
+	var itemOnList = $("<li></li>").text(species);
 
 	return itemOnList;
 }
@@ -137,8 +138,9 @@ function addEntToUserListPlus(){
 	
 	var index = clickedButton.substr(6,1);
 	chosenEnt = ents[index];
+	var species = chosenEnt.species;
 	
-	var itemOnList = $("<li></li>").text(chosenEnt.species);
+	var itemOnList = $("<li></li>").text(species);
 	
 	$(itemOnList).click(function () 
 		{
@@ -194,9 +196,10 @@ function createForm(container){
 	for (var index in ents) {
     		ent = ents[index];
 			opt = document.createElement("option");
-			opt.setAttribute("value" , "ent"+index);
+			entSpecies = ent.species;
+			opt.setAttribute("value" , entSpecies);
 			opt.setAttribute("id", "opt");
-			opt.innerHTML = ent.species;
+			opt.innerHTML = entSpecies;
 			selectEnt.appendChild(opt);
     	}
 		
@@ -290,14 +293,14 @@ function createInputField (className, name){
 
 function showFormData(){
 
-	$("#main").append($("<article id=\"userPlace\"></article>"));
-	$("#userPlace").append($("<header id=\"listHeader\"></header").text("Your order:"));
-	$("#userPlace").append($("<ul id=\"userList\"></ul>"));
-	$("#userList").append($("<li></li>").text("ent: " + getUrlParams('selected')));
-	$("#userList").append($("<li></li>").text("mail: " + getUrlParams('email')));
-	$("#userList").append($("<li></li>").text("delivery: " + getUrlParams('delivery')));
-	$("#userList").append($("<li></li>").text("address" + getUrlParams('address')));
-	$("#userList").append($("<li></li>").text("color" + getUrlParams('color')));
+	$("#main").append($("<article id=\"dataContainer\"></article>"));
+	$("#dataContainer").append($("<header id=\"formHeader\"></header").text("Your order:"));
+	$("#dataContainer").append($("<ul id=\"userInfo\"></ul>"));
+	$("#userInfo").append($("<li></li>").text("ent: " + getUrlParams('selected')));
+	$("#userInfo").append($("<li></li>").text("mail: " + getUrlParams('email')));
+	$("#userInfo").append($("<li></li>").text("delivery: " + getUrlParams('delivery')));
+	$("#userInfo").append($("<li></li>").text("address: " + getUrlParams('address')));
+	$("#userInfo").append($("<li style=\"color:"+getUrlParams('color')+";\"></li>").text("color: "+getUrlParams('color')));
 }
 
 function getUrlParams( prop ) {

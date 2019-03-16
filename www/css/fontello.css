@@ -57,7 +57,7 @@
  
 .icon-tree-2:before { content: '\e83f'; font-size: 40px; padding-left: 10px; padding-right: 10px; color: #4B0020;} /* '' */
 .icon-tree-2:hover { 
-	color: #E5AF24;
+	color: #E3DD3C;
 	transition: all .5s ease-in-out;
 	text-shadow: 20px 10px 19px rgba(42,59,15,0.3);
 	cursor: pointer;
