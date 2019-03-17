@@ -32,7 +32,7 @@ header a {
 
 h1 {
 	letter-spacing: 3px;
-	font-size: 40px;
+	font-size: 44px;
 	color: #101111;
 }
 
@@ -140,7 +140,7 @@ h4 {
 footer {
     clear: both;
 	text-align: center;
-	color: #01060A;;
+	color: #01060A;
 	height: 50px;
 	background-color: #005F23;
 }
@@ -188,6 +188,7 @@ table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
 
 table.entsTable th {
     background-color: #86044B;
+	color: #101413;
 }
 
 table.entsTable td {
@@ -263,7 +264,7 @@ table.entsTable input {
 	width: 200px;
 	border-bottom: 1px solid #A11361;
 	height: 25px;
-	color: #A11361;
+	color: #2A3532;
 	font-weight: 600;
 }
 
@@ -365,7 +366,7 @@ select:hover{
 #userInfo {
 	text-align: center;
     margin: 20px auto 20px auto;
-	width: 300px;
+	width: 400px;
 	height: 200px;
 	font-size: 18px;
 	background-color: #A2B2AF;
