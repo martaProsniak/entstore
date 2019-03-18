@@ -82,7 +82,7 @@ section {
 
 #userPlace {
 	width: 150px;
-	min-height: 350px;
+	min-height: 380px;
 	margin: 0px 25px 20px 30px;
 	float: left;
 	background-color: #A2B2AF;
@@ -123,7 +123,6 @@ section {
 	text-decoration: none;
 	color: #B7C9C6;
 	border: 2px solid #B7C9C6;
-	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);
 	-o-transform: scale(0.98);
@@ -191,11 +190,11 @@ table.entsTable th {
 	color: #101413;
 }
 
-table.entsTable td {
+table.entsTable td, table.entsTable input.button {
     background-color: #A2B2AF;
 }
 
-table.entsTable td.button:hover {
+table.entsTable input.button:hover {
     background-color: #04782F;
 	text-decoration: none;
 	color: #101111;
@@ -212,8 +211,14 @@ table.entsTable input {
 	text-decoration: none;
 	color: #2a3b0f;
 	cursor: pointer;
-	border: 2px solid #005F23;
-	border-radius: 2px;
+	border: 2px solid #01060A;
+    border-radius: 2px;
+	height: 40px;
+	margin: 0px 5px 0px 5px;
+	padding: 1px;
+	font-size: 18px;
+	color: #060807;
+	width: 100px;
 }
 
 #contactContainer {

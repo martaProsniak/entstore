@@ -97,14 +97,25 @@ function populateEnts(container){
 	
 	for (var i=0; i<buttons.length; i++) {
 		var buttonId = "button" + i;
-		buttons[i].setAttribute("id", buttonId); 
-		buttons[i].addEventListener("click", function() 
-			{ 
-				$("#userList").append($(addEntToUserListPlus())); 
-			}
-		);
+		buttons[i].setAttribute("id", buttonId);
+		buttons[i].setAttribute("onclick", "addEntToUserListWithRemoveOption("+i+")")
 	}
 
+}
+
+function addEntToUserListWithRemoveOption (i){
+
+    var buttonClicked = "#button"+i;
+    var species = $(buttonClicked)[0].name;
+    var itemOnList = $("<li></li>").text(species);
+
+    	$(itemOnList).click(function ()
+    		{
+    			removeFromList();
+    		}
+    	);
+
+    $("#userList").append($(itemOnList));
 }
 
 /**
@@ -132,7 +143,7 @@ function addEntToUserList(){
 * Additional feature allows removing ens from the list
 * @returns New 'li' element
 */
-function addEntToUserListPlus(){
+function chooseItemToBeShownOnList(){
 	
 	var clickedButton = event.srcElement.id;
 	
@@ -141,24 +152,10 @@ function addEntToUserListPlus(){
 	var species = chosenEnt.species;
 	
 	var itemOnList = $("<li></li>").text(species);
-	
-	$(itemOnList).click(function () 
-		{
-			removeFromList();
-		}
-	);
 
 	return itemOnList;
 }
 
-/**
-*	
-* Removes ent from userList
-*
-*/
-function removeFromList(){
-	$(event.target).remove();
-}
 
 /**
 *	
@@ -417,7 +414,10 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	var td4 = document.createElement("td");
 	var td5 = document.createElement("td");
 	var td6 = document.createElement("td");
-	var td7 = document.createElement("td");
+	var button = document.createElement("input");
+	button.setAttribute("type", "button");
+	button.setAttribute("value", "add");
+	button.setAttribute("name", species);
 
 	td1.innerHTML = species;
 	td2.innerHTML = age;
@@ -425,11 +425,11 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	td4.innerHTML = mobile;
 	td5.innerHTML = nest.birds;
 	td6.innerHTML = nest.count;
-	td7.innerHTML = button;
+	button.innerHTML = button;
 	
 	td5.classList.add("birds");
 	td6.classList.add("count");
-	td7.classList.add("button");
+	button.classList.add("button");
 	
 	tr.appendChild(td1);
 	tr.appendChild(td2);
@@ -437,7 +437,7 @@ function createTableRows(species, age, plantYear, mobile, nest, button){
 	tr.appendChild(td4);
 	tr.appendChild(td5);
 	tr.appendChild(td6);
-	tr.appendChild(td7);
+	tr.appendChild(button);
 	
 	return tr;
 }
