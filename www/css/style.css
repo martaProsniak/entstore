@@ -59,12 +59,12 @@ nav ul li a {
     padding: 5px;
     text-decoration: none;
     font-size: 25px;
-	color: #f77256;
+	color: #CF5340;
     text-transform: capitalize;
 }
 
-nav ul li a:hover {
-    background-color: #f77256;
+nav ul li a:hover{
+    background-color: #CF5340;
     text-decoration: none;
 	color: #01060A;
 	-moz-transform: rotate(3deg);
@@ -282,9 +282,8 @@ form input[type=reset], form input[type=submit] {
 input:hover {
 	cursor: pointer;
 	background-color: #bad6d0;
-	border: 2px solid #B7C9C6;
 	color: #A52206;
-	border: 2px solid #C83617;
+	border: 2px solid #FF7F5A;
 }
 
 span.delivery:hover{
@@ -330,7 +329,7 @@ span.delivery {
 select:hover{
 	text-decoration: none;
 	background-color: #bad6d0;
-	border: 2px solid #B7C9C6;
+	border: 2px solid #FF7F5A;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);
@@ -409,4 +408,11 @@ select:hover{
 img {
 	border: 2px solid #01060A;
 	border-radius: 2px;
+	opacity: 0.8;
+}
+
+img:hover{
+	opacity: 1;
+	transform: scale(1.05);
+	transition: all .5s ease-in-out;
 }

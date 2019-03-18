@@ -55,9 +55,9 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-tree-2:before { content: '\e83f'; padding-left: 10px; padding-right: 10px; color: #C83617;} /* '' */
+.icon-tree-2:before { content: '\e83f'; padding-left: 10px; padding-right: 10px;} /* '' */
 .icon-tree-2:hover { 
-	color: #E3DD3C;
+	color: #C83617;
 	transition: all .5s ease-in-out;
 	text-shadow: 20px 10px 19px rgba(42,59,15,0.3);
 	cursor: pointer;
