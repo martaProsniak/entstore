@@ -24,6 +24,7 @@ header {
 	border-color: #C77318;
 	border-radius: 5px 10px 0px 0px;
 	font-family: 'Great Vibes', cursive;
+	font-size: 24px;
 }
 
 header a {
@@ -32,7 +33,6 @@ header a {
 
 h1 {
 	letter-spacing: 3px;
-	font-size: 44px;
 	color: #101111;
 }
 
