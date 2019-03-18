@@ -197,7 +197,7 @@ table.entsTable td, table.entsTable input.button {
 table.entsTable input.button:hover {
     background-color: #04782F;
 	text-decoration: none;
-	color: #101111;
+	color: #c9c2a1;
 	cursor: pointer;
 	-moz-transform: scale(0.98);
 	-webkit-transform: scale(0.98);
@@ -214,11 +214,11 @@ table.entsTable input {
 	border: 2px solid #01060A;
     border-radius: 2px;
 	height: 40px;
-	margin: 0px 5px 0px 5px;
+	margin: 0px 2px 0px 2px;
 	padding: 1px;
 	font-size: 18px;
 	color: #060807;
-	width: 100px;
+	width: 110px;
 }
 
 #contactContainer {
