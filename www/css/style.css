@@ -71,7 +71,7 @@ nav ul li a:hover {
 	-webkit-transform: rotate(3deg);
 	-o-transform: rotate(3deg);
 	-ms-transform: rotate(3deg);
-	-transform: rotate(3deg);
+	transform: rotate(3deg);
 	transition: all .5s ease-in-out;
 }
 

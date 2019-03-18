@@ -98,64 +98,20 @@ function populateEnts(container){
 	for (var i=0; i<buttons.length; i++) {
 		var buttonId = "button" + i;
 		buttons[i].setAttribute("id", buttonId);
-		buttons[i].setAttribute("onclick", "addEntToUserListWithRemoveOption("+i+")")
+		buttons[i].setAttribute("onclick", "addEntToUserList("+i+")")
 	}
 
 }
 
-function addEntToUserListWithRemoveOption (i){
+function addEntToUserList(i){
 
     var buttonClicked = "#button"+i;
     var species = $(buttonClicked)[0].name;
     var itemOnList = $("<li></li>").text(species);
 
-    	$(itemOnList).click(function ()
-    		{
-    			removeFromList();
-    		}
-    	);
 
     $("#userList").append($(itemOnList));
 }
-
-/**
-*
-* Finds chosen ent and put it on the list
-*
-* @returns New 'li' element
-*/
-function addEntToUserList(){
-	
-	var clickedButton = event.srcElement.id;
-	
-	var index = clickedButton.substr(6,1);
-	chosenEnt = ents[index];
-	var species = chosenEnt.species;
-	
-	var itemOnList = $("<li></li>").text(species);
-
-	return itemOnList;
-}
-
-/**
-*
-* Finds chosen ent and put it on the list
-* Additional feature allows removing ens from the list
-* @returns New 'li' element
-*/
-function chooseItemToBeShownOnList(){
-	
-	var clickedButton = event.srcElement.id;
-	
-	var index = clickedButton.substr(6,1);
-	chosenEnt = ents[index];
-	var species = chosenEnt.species;
-	
-	var itemOnList = $("<li></li>").text(species);
-
-	return itemOnList;
-}
-
 
 /**
 *	
@@ -301,7 +257,7 @@ function showFormData(){
 	$("#userInfo").append($("<li></li>").text("ent: " + getUrlParams('selected')));
 	$("#userInfo").append($("<li></li>").text("mail: " + getUrlParams('email')));
 	$("#userInfo").append($("<li></li>").text("delivery: " + getUrlParams('delivery')));
-	$("#userInfo").append($("<li></li>").text("address: " + getUrlParams('address').replace("+", " ")));
+	$("#userInfo").append($("<li></li>").text("address: " + getUrlParams('address').replace(/\+/g, " ")));
 	$("#userInfo").append($("<li></li>").text("color: "+getUrlParams('color')));
 	$("#userInfo").append($("<span id=\"userColor\"; style=\"background-color:"+getUrlParams('color')+"; \"></span>"));
 }
