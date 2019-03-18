@@ -55,7 +55,7 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-tree-2:before { content: '\e83f'; font-size: 40px; padding-left: 10px; padding-right: 10px; color: #4B0020;} /* '' */
+.icon-tree-2:before { content: '\e83f'; font-size: 40px; padding-left: 10px; padding-right: 10px; color: #A52206;} /* '' */
 .icon-tree-2:hover { 
 	color: #E3DD3C;
 	transition: all .5s ease-in-out;

@@ -115,11 +115,11 @@ section {
 #userList li {
 	display: block;
 	text-decoration: none;
-	border-bottom: 2px solid #86044B;
+	border-bottom: 2px solid #C83617;
 }
 
 #userList li:hover{
-    background-color: #86044B;
+    background-color: #C83617;
 	text-decoration: none;
 	color: #B7C9C6;
 	border: 2px solid #B7C9C6;
@@ -186,7 +186,7 @@ table.entsTable, table.entsTable tr, table.entsTable th, table.entsTable td {
 }
 
 table.entsTable th {
-    background-color: #86044B;
+    background-color: #C83617;
 	color: #101413;
 }
 
@@ -260,14 +260,14 @@ table.entsTable input {
 	margin: auto;
 	width: 450px;
 	height: 240px;
-	border: 2px solid #86044B;
+	border: 2px solid #C83617;
 }
 
 .label {
     float: left;
 	margin: 8px;
 	width: 200px;
-	border-bottom: 1px solid #A11361;
+	border-bottom: 1px solid #FF2C00;
 	height: 25px;
 	color: #2A3532;
 	font-weight: 600;
@@ -283,11 +283,12 @@ input:hover {
 	cursor: pointer;
 	background-color: #bad6d0;
 	border: 2px solid #B7C9C6;
-	color: #A11361;
+	color: #A52206;
+	border: 2px solid #C83617;
 }
 
 span.delivery:hover{
-	color: #A11361;
+	color: #A52206;
 }
 
 input {
@@ -324,11 +325,9 @@ span.delivery {
 	float: left;
 	margin-top: 10px;
 	height: 30px;
-	/*border: 1px solid black;*/
 }
 
 select:hover{
-	color: #A11361;
 	text-decoration: none;
 	background-color: #bad6d0;
 	border: 2px solid #B7C9C6;
@@ -342,11 +341,11 @@ select:hover{
 
 #opt{
 	background-color: #B9CCC8;
-	color: #A11361;
+	color: #FF2C00;
 }
 
 #opt:hover{
-	background-color: #A11361;
+	background-color: #FF2C00;
 	color: #B9CCC8;
 	border: 2px solid #B7C9C6;
 	cursor: pointer;
@@ -387,7 +386,7 @@ select:hover{
 #userInfo li {
 	display: block;
 	text-decoration: none;
-	border-bottom: 1px solid #86044B;
+	border-bottom: 1px solid #C83617;
 	letter-spacing: 2px;
 }
 
