@@ -89,7 +89,7 @@ function populateEnts(container){
 	userList.setAttribute("id", "userList");
 	entAside.appendChild(userList);
 	
-	var entsTable = createEntsTable(ent);
+	var entsTable = createEntsTable();
 	article.appendChild(entsTable);
 	
 	var buttons = document.getElementsByClassName("button");
@@ -288,7 +288,7 @@ function getUrlParams( prop ) {
 * @returns New 'table' element
 *
 */
-function createEntsTable(ent){
+function createEntsTable(){
 	var table = document.createElement("table");
 	
 	var caption = document.createElement("caption");

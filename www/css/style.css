@@ -59,12 +59,12 @@ nav ul li a {
     padding: 5px;
     text-decoration: none;
     font-size: 25px;
-	color: #B7C9C6;
+	color: #f77256;
     text-transform: capitalize;
 }
 
 nav ul li a:hover {
-    background-color: #B7C9C6;
+    background-color: #f77256;
     text-decoration: none;
 	color: #01060A;
 	-moz-transform: rotate(3deg);
